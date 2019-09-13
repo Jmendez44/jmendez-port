@@ -3,5 +3,116 @@ body {
           box-sizing: border-box;
   width: 100vw;
   height: 100vh;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+
+body .App {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .App .about-page {
+  width: 80%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .App .about {
+  width: 40%;
+  height: 55%;
+  border: black solid;
+}
+
+body .App .code-box {
+  font-weight: bold;
+  font-size: 4em;
+  line-height: 1;
+  text-align: justify;
+  width: 45%;
+}
+
+body .App .code-box .wd {
+  background: red;
+  color: white;
+}
+
+body .App .code-box .m {
+  background-color: green;
+  color: white;
+}
+
+body .App .code-box .c {
+  background-color: blue;
+  color: white;
+}
+
+body .App .code-box .ps {
+  background-color: hotpink;
+  color: white;
+}
+
+body .App .code-box i {
+  font-style: italic;
+  border-bottom: red dotted 4px;
+}
+
+body .App .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20%;
+  position: fixed;
+  top: 92.7vh;
+  right: 14vw;
+  margin-right: 25px;
+}
+
+body .App .links ul {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .App .links ul li {
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+body .App .links ul li:hover {
+  background-color: red;
+  color: white;
+  text-transform: lowercase;
+  letter-spacing: 2.5px;
+}
+
+body .App .lines {
+  position: fixed;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=Main.css.map */

@@ -2,4 +2,122 @@ body {
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+
+  .App {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .about-page {
+      width: 80%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .about {
+      width: 40%;
+      height: 55%;
+      border: black solid;
+
+    }
+
+    .me {
+      // border: black solid;
+    }
+
+    .code-box {
+      font-weight: bold;
+      font-size: 4em;
+      line-height: 1;
+      text-align: justify;
+      // border: black solid;
+      width: 45%;
+
+      .wd{
+        background: red;
+        color: white;
+      }
+
+      .m {
+        background-color: green;
+        color: white;
+      }
+
+      .c{
+        background-color: blue;
+        color: white;
+      }
+
+      .ps{
+        background-color: hotpink;
+        color: white;
+      }
+
+      i {
+        font-style: italic;
+        border-bottom: red dotted 4px;
+        // background: red;
+      }
+      .wrap {
+        
+        // overflow-wrap: break-word;
+        
+          
+          span {
+            
+            
+          }
+        
+      }
+
+
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+
+      width: 20%;
+      position: fixed;
+      top: 92.7vh;
+      right: 14vw;
+
+      margin-right: 25px;
+      ul {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+          cursor: pointer;
+          font-size: 1.5em;
+          font-weight: bold;
+          &:hover {
+            background-color: red;
+            color: white;
+            text-transform: lowercase;
+            letter-spacing: 2.5px;
+            // font-style: italic;
+          }
+        }
+      }
+    }
+
+    .lines {
+      position: fixed;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .bottom-corner {
+      path {
+      }
+      // position: relative;
+    }
+  }
 }

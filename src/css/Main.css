@@ -33,18 +33,29 @@ body .App .about-page {
           align-items: center;
 }
 
+body .App .about-page .bottom {
+  border: black solid;
+  position: fixed;
+  top: 75%;
+  width: 30%;
+  height: 10%;
+}
+
 body .App .about {
   width: 40%;
   height: 55%;
-  border: black solid;
 }
 
 body .App .code-box {
   font-weight: bold;
   font-size: 4em;
   line-height: 1;
-  text-align: justify;
-  width: 45%;
+  width: 50%;
+}
+
+body .App .code-box .about-fin {
+  line-height: 0;
+  font-size: 3rem;
 }
 
 body .App .code-box .wd {
@@ -81,13 +92,12 @@ body .App .links {
           justify-content: center;
   width: 20%;
   position: fixed;
-  top: 92.7vh;
+  top: 92.5vh;
   right: 14vw;
-  margin-right: 25px;
 }
 
 body .App .links ul {
-  width: 95%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

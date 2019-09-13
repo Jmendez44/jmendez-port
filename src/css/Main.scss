@@ -16,12 +16,19 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      .bottom {
+        border: black solid;
+        position: fixed;
+        top: 75%;
+        width: 30%;
+        height: 10%;
+      }
     }
 
     .about {
       width: 40%;
       height: 55%;
-      border: black solid;
+      // border: black solid;
 
     }
 
@@ -33,9 +40,16 @@ body {
       font-weight: bold;
       font-size: 4em;
       line-height: 1;
-      text-align: justify;
+      // text-align: justify;
       // border: black solid;
-      width: 45%;
+      width: 50%;
+
+    
+
+      .about-fin {
+        line-height: 0;
+        font-size: 3rem;
+      }
 
       .wd{
         background: red;
@@ -83,12 +97,12 @@ body {
 
       width: 20%;
       position: fixed;
-      top: 92.7vh;
+      top: 92.5vh;
       right: 14vw;
 
-      margin-right: 25px;
+      // margin-right: 25px;
       ul {
-        width: 95%;
+        width: 90%;
         display: flex;
         justify-content: space-between;
 

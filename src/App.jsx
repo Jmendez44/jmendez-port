@@ -1,20 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import "./css/Main.css";
 import { useSpring, animated } from "react-spring";
 
 import TypedReact from "./TypedReact";
 import Borders from "./Borders";
-import Toggle from "./Toggle";
+import Toggle from './Toggle'
+import Nav from "./Nav";
+import { async } from "q";
+
+
+const interp = i => r => `translate3d(0, ${15 * Math.sin(r + (i * 2 * Math.PI) / 1.6)}px, 0)`
+
 
 const App = () => {
-  const fade = useSpring({
-    from: {
-      opacity: 0
-    },
-    opacity: 1
+  
+  const [isNavOpen, setNavOpen] = useState(false);
+  const navAnimation = useSpring({
+    content: isNavOpen ? "Close" : "Menu",
+    transform: isNavOpen
+      ? `translate3d(0,0,0) scale(1)`
+      : `translate3d(100%,0,0) scale(0.6)`
   });
 
-  console.log(fade);
+  const [movingIcons, setMovingIcons] = useState(false);
+  const randomNumber = () => {
+    return `${Math.floor(Math.random() * 50 / 2)}%`;
+  }
+  const {y} = useSpring({
+    y: movingIcons ? 0 : -100
+  })
+
+  const { radians } = useSpring({
+    to: async next => {
+      while (1) await next({ radians: 2 * Math.PI })
+    },
+    from: { radians: 0 },
+    config: { duration: 3500 },
+    reset: true,
+  })
+  // const fade = useSpring({
+  //   from: {
+  //     opacity: 0
+  //   },
+  //   opacity: 1
+  // });
+
+  // console.log(fade);
+
+  const {color} = useSpring({
+    color: 'red'
+  })
 
   return (
     <div className="App">
@@ -22,7 +57,7 @@ const App = () => {
         <div className="code-box">
           <TypedReact
             strings={[
-              "Hello!^500 <br> my name is Jay^500 ",
+              "Hello!^500 <br> my name is Jenuel^500 <br> but most call me Jay",
               `I'm a <span class="wd">Web Developer</span>`,
               `I'm a <span class="m">Musician</span>`,
               `I'm a <span class="c">Creator</span>`,
@@ -33,30 +68,30 @@ const App = () => {
             ]}
           />
         </div>
-        <animated.div className="about me" style={fade}>
-          <i className="fab fa-js fa-4x"></i>
-          <i className="fab fa-react fa-4x"></i>
-          <i className="fab fa-node fa-4x"></i>
-          <i className="fab fa-python fa-4x"></i>
-
-          <i className="fab fa-github fa-4x"></i>
-          <i className="fab fa-sass fa-4x"></i>
-          <i className="fab fa-html5 fa-4x"></i>
-          <i className="fab fa-css3-alt fa-4x"></i>
-
-          <main>
-            <Toggle />
-          </main>
-        </animated.div>
-        {/* <div className="bottom">
-          test
-        </div> */}
+        <div className="about me" >
+          
+          <animated.i onMouseOver={color} style={{transform: radians.interpolate(interp(2)) }} className="fab fa-react fa-5x"></animated.i>
+          <animated.i style={{transform: radians.interpolate(interp(3)) }} className="fab fa-node fa-5x"></animated.i>
+          <animated.i style={{transform: radians.interpolate(interp(4)) }} className="fab fa-python fa-5x"></animated.i>
+          <animated.i style={{transform: radians.interpolate(interp(5)) }} className="fab fa-github fa-5x"></animated.i>
+          <animated.i style={{transform: radians.interpolate(interp(6)) }} className="fab fa-sass fa-5x"></animated.i>
+          <animated.i style={{transform: radians.interpolate(interp(9)) }} class="fab fa-adobe fa-5x"></animated.i>
+          <animated.i style={{transform: radians.interpolate(interp(7)) }} className="fab fa-html5 fa-5x"></animated.i>
+          <animated.i style={{transform: radians.interpolate(interp(8)) }} className="fab fa-css3-alt fa-5x"></animated.i>
+          <animated.i style={{transform:  radians.interpolate(interp(1))}} className="fab fa-js fa-5x"/>
+          
+          {/* <main><Toggle /></main> */}
+        </div>
       </div>
-
+      {/* Mobile Version Nav bar  */}
+      {/* <button className="btn" onClick={() => setNavOpen(!isNavOpen)}>
+        button
+      </button> */}
+      {/* <Nav style={navAnimation} /> */}
       <div className="links">
         <ul>
           <li className="active" href="">
-            [HOME]{" "}
+            [HOME]
           </li>
           <li href="">[PROJECTS] </li>
           <li href="">[CONTACT]</li>

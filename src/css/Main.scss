@@ -33,7 +33,21 @@ body {
     }
 
     .me {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 45%;
+      flex-wrap: wrap;
       // border: black solid;
+      .fab {
+        display: flex;
+        justify-content: center;
+        width: 30%;
+
+        
+        
+        // background: red;
+      }
     }
 
     .code-box {
@@ -71,11 +85,7 @@ body {
         color: white;
       }
 
-      i {
-        font-style: italic;
-        border-bottom: red dotted 4px;
-        // background: red;
-      }
+
       .wrap {
         
         // overflow-wrap: break-word;
@@ -135,3 +145,36 @@ body {
     }
   }
 }
+
+
+.nav-wrapper {
+  background-color: aquamarine;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  nav {
+    height: 100%;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    flex-direction: column;
+    a {
+      text-decoration: none;
+      text-decoration-color: black;
+      &:visited {
+        color: black;
+      }
+    }
+  }
+}
+
+.btn {
+  position: fixed;
+  top: 10%;
+  z-index: 15;
+  width: 10%;
+  height: 2%;
+}
+

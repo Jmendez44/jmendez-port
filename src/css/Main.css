@@ -61,6 +61,14 @@ body .App .me {
       flex-wrap: wrap;
 }
 
+body .App .me .unity {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 7.5%;
+  width: 85px;
+  height: auto;
+}
+
 body .App .me .fab {
   display: -webkit-box;
   display: -ms-flexbox;

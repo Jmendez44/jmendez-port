@@ -29,7 +29,6 @@ body {
       width: 40%;
       height: 55%;
       // border: black solid;
-
     }
 
     .me {
@@ -39,13 +38,17 @@ body {
       height: 45%;
       flex-wrap: wrap;
       // border: black solid;
+      .unity {
+        box-sizing: border-box;
+        margin: 0 7.5%;
+        width: 85px;
+        height: auto;
+      }
       .fab {
         display: flex;
         justify-content: center;
         width: 30%;
 
-        
-        
         // background: red;
       }
     }
@@ -58,14 +61,12 @@ body {
       // border: black solid;
       width: 50%;
 
-    
-
       .about-fin {
         line-height: 0;
         font-size: 3rem;
       }
 
-      .wd{
+      .wd {
         background: red;
         color: white;
       }
@@ -75,30 +76,22 @@ body {
         color: white;
       }
 
-      .c{
+      .c {
         background-color: blue;
         color: white;
       }
 
-      .ps{
+      .ps {
         background-color: hotpink;
         color: white;
       }
 
-
       .wrap {
-        
         // overflow-wrap: break-word;
-        
-          
-          span {
-            
-            
-          }
-        
+
+        span {
+        }
       }
-
-
     }
 
     .links {
@@ -146,7 +139,6 @@ body {
   }
 }
 
-
 .nav-wrapper {
   background-color: aquamarine;
   position: fixed;
@@ -177,4 +169,3 @@ body {
   width: 10%;
   height: 2%;
 }
-

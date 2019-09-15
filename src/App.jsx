@@ -1,19 +1,16 @@
 import React, { useState } from "react";
 import "./css/Main.css";
 import { useSpring, animated } from "react-spring";
-
 import TypedReact from "./TypedReact";
 import Borders from "./Borders";
-import Toggle from './Toggle'
+import Toggle from "./Toggle";
 import Nav from "./Nav";
-import { async } from "q";
 
-
-const interp = i => r => `translate3d(0, ${15 * Math.sin(r + (i * 2 * Math.PI) / 1.6)}px, 0)`
-
+const interp = i => r =>
+  `translate3d(0, ${15 * Math.sin(r + (i * 2 * Math.PI) / 1.6)}px, 0)`;
 
 const App = () => {
-  
+  const [isToggled, setToggle] = useState(false);
   const [isNavOpen, setNavOpen] = useState(false);
   const navAnimation = useSpring({
     content: isNavOpen ? "Close" : "Menu",
@@ -24,20 +21,20 @@ const App = () => {
 
   const [movingIcons, setMovingIcons] = useState(false);
   const randomNumber = () => {
-    return `${Math.floor(Math.random() * 50 / 2)}%`;
-  }
-  const {y} = useSpring({
+    return `${Math.floor((Math.random() * 50) / 2)}%`;
+  };
+  const { y } = useSpring({
     y: movingIcons ? 0 : -100
-  })
+  });
 
   const { radians } = useSpring({
     to: async next => {
-      while (1) await next({ radians: 2 * Math.PI })
+      while (1) await next({ radians: 2 * Math.PI });
     },
     from: { radians: 0 },
     config: { duration: 3500 },
-    reset: true,
-  })
+    reset: true
+  });
   // const fade = useSpring({
   //   from: {
   //     opacity: 0
@@ -47,9 +44,9 @@ const App = () => {
 
   // console.log(fade);
 
-  const {color} = useSpring({
-    color: 'red'
-  })
+  const color = () => {
+    return "red";
+  };
 
   return (
     <div className="App">
@@ -68,18 +65,50 @@ const App = () => {
             ]}
           />
         </div>
-        <div className="about me" >
-          
-          <animated.i onMouseOver={color} style={{transform: radians.interpolate(interp(2)) }} className="fab fa-react fa-5x"></animated.i>
-          <animated.i style={{transform: radians.interpolate(interp(3)) }} className="fab fa-node fa-5x"></animated.i>
-          <animated.i style={{transform: radians.interpolate(interp(4)) }} className="fab fa-python fa-5x"></animated.i>
-          <animated.i style={{transform: radians.interpolate(interp(5)) }} className="fab fa-github fa-5x"></animated.i>
-          <animated.i style={{transform: radians.interpolate(interp(6)) }} className="fab fa-sass fa-5x"></animated.i>
-          <animated.i style={{transform: radians.interpolate(interp(9)) }} class="fab fa-adobe fa-5x"></animated.i>
-          <animated.i style={{transform: radians.interpolate(interp(7)) }} className="fab fa-html5 fa-5x"></animated.i>
-          <animated.i style={{transform: radians.interpolate(interp(8)) }} className="fab fa-css3-alt fa-5x"></animated.i>
-          <animated.i style={{transform:  radians.interpolate(interp(1))}} className="fab fa-js fa-5x"/>
-          
+        <div className="about me">
+          <animated.i
+            style={{ transform: radians.interpolate(interp(1)) }}
+            className="fab fa-html5 fa-5x"
+            
+          ></animated.i>
+          <animated.i
+            style={{ transform: radians.interpolate(interp(3)) }}
+            className="fab fa-node fa-5x"
+          ></animated.i>
+          <animated.i
+            style={{ transform: radians.interpolate(interp(5)) }}
+            className="fab fa-react fa-5x"
+            
+          ></animated.i>
+          <animated.i
+            style={{ transform: radians.interpolate(interp(1)) }}
+            className="fab fa-css3-alt fa-5x"
+           
+          ></animated.i>
+          <animated.i
+            style={{ transform: radians.interpolate(interp(3)) }}
+            className="fab fa-python fa-5x"
+            
+          ></animated.i>
+          <animated.i
+            style={{ transform: radians.interpolate(interp(5)) }}
+            class="fab fa-adobe fa-5x"
+          ></animated.i>
+          <animated.i
+            style={{ transform: radians.interpolate(interp(1)) }}
+            className="fab fa-js fa-5x"
+            
+          ></animated.i>
+          <animated.i
+            style={{ transform: radians.interpolate(interp(3)) }}
+            className="fab fa-github fa-5x"
+          ></animated.i>
+          <animated.img
+          src={require('./Assets/unity.png')}
+            style={{ transform: radians.interpolate(interp(5)) }}
+            className="unity"
+          />
+
           {/* <main><Toggle /></main> */}
         </div>
       </div>

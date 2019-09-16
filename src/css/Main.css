@@ -19,6 +19,22 @@ body .App {
           align-items: center;
 }
 
+body .App .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  pointer-events: none;
+  width: 100vw;
+  position: absolute;
+}
+
 body .App .about-page {
   width: 80%;
   height: 100%;
@@ -122,6 +138,7 @@ body .App .links {
   position: fixed;
   top: 92.5vh;
   right: 14vw;
+  z-index: 100;
 }
 
 body .App .links ul {
@@ -134,13 +151,14 @@ body .App .links ul {
           justify-content: space-between;
 }
 
-body .App .links ul li {
-  cursor: pointer;
+body .App .links ul a {
+  text-decoration: none;
+  color: black;
   font-size: 1.5em;
   font-weight: bold;
 }
 
-body .App .links ul li:hover {
+body .App .links ul a:hover {
   background-color: red;
   color: white;
   text-transform: lowercase;
@@ -193,5 +211,11 @@ body .App .lines {
   z-index: 15;
   width: 10%;
   height: 2%;
+}
+
+.projects-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: aqua;
 }
 /*# sourceMappingURL=Main.css.map */

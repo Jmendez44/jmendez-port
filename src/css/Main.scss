@@ -10,6 +10,17 @@ body {
     justify-content: center;
     align-items: center;
 
+    .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      pointer-events: none;
+      width: 100vw;
+      position: absolute;
+    }
+    
+
     .about-page {
       width: 80%;
       height: 100%;
@@ -102,6 +113,7 @@ body {
       position: fixed;
       top: 92.5vh;
       right: 14vw;
+      z-index: 100;
 
       // margin-right: 25px;
       ul {
@@ -109,8 +121,9 @@ body {
         display: flex;
         justify-content: space-between;
 
-        li {
-          cursor: pointer;
+        a {
+          text-decoration: none;
+          color: black;
           font-size: 1.5em;
           font-weight: bold;
           &:hover {
@@ -168,4 +181,10 @@ body {
   z-index: 15;
   width: 10%;
   height: 2%;
+}
+
+.projects-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: aqua;
 }

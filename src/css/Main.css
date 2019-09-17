@@ -7,6 +7,7 @@ body {
 }
 
 body .App {
+  overflow: hidden;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,6 +21,8 @@ body .App {
 }
 
 body .App .main {
+  overflow: hidden;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,7 +162,7 @@ body .App .links ul a {
 }
 
 body .App .links ul a:hover {
-  background-color: red;
+  background-color: black;
   color: white;
   text-transform: lowercase;
   letter-spacing: 2.5px;
@@ -216,6 +219,12 @@ body .App .lines {
 .projects-container {
   width: 100vw;
   height: 100vh;
-  background-color: aqua;
+  background-color: lightcoral;
+}
+
+.contact-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightblue;
 }
 /*# sourceMappingURL=Main.css.map */

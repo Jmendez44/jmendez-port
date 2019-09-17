@@ -5,12 +5,15 @@ body {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
 
   .App {
+    overflow: hidden;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
 
     .main {
+      overflow: hidden;
+      background-color: white;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -127,7 +130,7 @@ body {
           font-size: 1.5em;
           font-weight: bold;
           &:hover {
-            background-color: red;
+            background-color: black;
             color: white;
             text-transform: lowercase;
             letter-spacing: 2.5px;
@@ -186,5 +189,12 @@ body {
 .projects-container {
   width: 100vw;
   height: 100vh;
-  background-color: aqua;
+  background-color: lightcoral;
+  
+}
+
+.contact-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightblue;
 }

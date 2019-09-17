@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 
 const Contact = () => {
+  const [isToggled, setToggle] = useState(false);
   return (
-    <div className="contact-container">
+    <div onLoad={()=>setToggle(!isToggled)} className="contact-container">
       
     </div>
   )

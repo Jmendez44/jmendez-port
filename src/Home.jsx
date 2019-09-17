@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./css/Main.css";
 import { useSpring, animated } from "react-spring";
 import TypedReact from "./TypedReact";
@@ -11,44 +11,51 @@ const interp = i => r =>
 
 const Home = () => {
   const [isToggled, setToggle] = useState(false);
-  const [isNavOpen, setNavOpen] = useState(false);
-  const navAnimation = useSpring({
-    content: isNavOpen ? "Close" : "Menu",
-    transform: isNavOpen
-      ? `translate3d(0,0,0) scale(1)`
-      : `translate3d(100%,0,0) scale(0.6)`
-  });
+  
+  // const navAnimation = useSpring({
+  //   content: isNavOpen ? "Close" : "Menu",
+  //   transform: isNavOpen
+  //     ? `translate3d(0,0,0) scale(1)`
+  //     : `translate3d(100%,0,0) scale(0.6)`
+  // });
 
   const [movingIcons, setMovingIcons] = useState(false);
-  const randomNumber = () => {
-    return `${Math.floor((Math.random() * 50) / 2)}%`;
-  };
+  // const randomNumber = () => {
+  //   return `${Math.floor((Math.random() * 50) / 2)}%`;
+  // };
+
   const { y } = useSpring({
     y: movingIcons ? 0 : -100
   });
 
+
+  const [count, set] = useState(0)
+
   const { radians } = useSpring({
-    to: async next => {
-      while (1) await next({ radians: 2 * Math.PI });
-    },
+    
     from: { radians: 0 },
+    to: async next => {
+      while (false) {await next({ radians: 2 * Math.PI})};
+    },
+    
     config: { duration: 3500 },
     reset: true
   });
-  // const fade = useSpring({
-  //   from: {
-  //     opacity: 0
-  //   },
-  //   opacity: 1
-  // });
 
-  // console.log(fade);
+  // useEffect(() => {
+  //   return () => {
+  //     setToggle(!isToggled);
+  //   }
+  // }, []);
 
-  const color = () => {
-    return "red";
-  };
+
+  console.log(isToggled);
+  // const color = () => {
+  //   return "red";
+  // };
+
   return (
-    <div className="about-page">
+    <div  className="about-page">
       <div className="code-box">
         <TypedReact
           strings={[
@@ -86,7 +93,7 @@ const Home = () => {
         ></animated.i>
         <animated.i
           style={{ transform: radians.interpolate(interp(5)) }}
-          class="fab fa-adobe fa-5x"
+          className="fab fa-adobe fa-5x"
         ></animated.i>
         <animated.i
           style={{ transform: radians.interpolate(interp(1)) }}
@@ -104,7 +111,7 @@ const Home = () => {
 
         
 
-        {/* <main><Toggle /></main> */}
+        
       </div>
     </div>
   );

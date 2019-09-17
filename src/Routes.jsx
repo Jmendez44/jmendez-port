@@ -11,9 +11,9 @@ import Projects from "./Projects";
 import Home from "./Home";
 import Contact from "./Contact";
 
-function useRouter() {
+const useRouter = () => {
   return useContext(__RouterContext);
-}
+};
 
 const Routes = () => {
   return (
@@ -32,43 +32,41 @@ const Routes = () => {
 };
 
 const Main = () => {
-  return (
-    <animated.div className="main">
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/projects" component={Projects} />
-        <Route exact path="/contact" component={Contact} />
-      </Switch>
-    </animated.div>
-  );
-  // const { location } = useRouter();
-  // const transitions = useTransition(location, location => location.key, {
-  //   from: {
-  //     opacity: 0,
-  //     transform: "translate3d(100%,0,0)"
-  //   },
-  //   enter: { opacity: 1, transform: "translate3d(0,0,0)" },
-  //   leave: { opacity: 0, transform: "translate3d(-50%,0,0)" }
-  // });
-
-  // return transitions.map(({ item, props: transition, key }) => (
-  //   <animated.div className="main" key={key} style={transition}>
-  //     <Switch >
+  // return (
+  //   <animated.div className="main">
+  //     <Switch>
   //       <Route exact path="/" component={Home} />
   //       <Route exact path="/projects" component={Projects} />
   //       <Route exact path="/contact" component={Contact} />
   //     </Switch>
   //   </animated.div>
-  // ));
+  // );
+  const { location } = useRouter();
+  const transitions = useTransition(location, location => location.key, {
+    initial: {transform: "scale(1) " },
+    from: { transform: "scale(0.2) "  },
+    enter: { transform: "scale(1) " },
+    leave: { transform: "scale(5) ", zIndex: -100  }
+  });
+
+  return transitions.map(({ item, props: transition, key }) => (
+    <animated.div className="main" key={key} style={transition}>
+      <Switch location={item}>
+        <Route exact path="/" component={Home} />
+        <Route path="/projects" component={Projects} />
+        <Route path="/contact" component={Contact} />
+      </Switch>
+    </animated.div>
+  ));
 };
 
-function NavLink(props) {
+const NavLink = props => {
   return (
     <li>
       <Link {...props} />
     </li>
   );
-}
+};
 
 // const NavLink = (props) => {
 //   return (

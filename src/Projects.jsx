@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import Routes from './Routes'
 
 const Projects = () => {
+  const [isToggled, setToggle] = useState(false);
   return (
-    <div className='projects-container'>
+    <div onLoad={()=>setToggle(!isToggled)} className='projects-container'>
       <div className="me">
         test
       </div>

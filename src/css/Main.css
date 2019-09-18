@@ -33,7 +33,6 @@ body .App .main {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  pointer-events: none;
   width: 100vw;
   position: absolute;
 }
@@ -65,7 +64,7 @@ body .App .about {
   height: 55%;
 }
 
-body .App .me {
+body .App .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,7 +74,20 @@ body .App .me {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 45%;
+}
+
+body .App .me {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -223,8 +235,26 @@ body .App .lines {
 }
 
 .contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: lightblue;
+  background: lightsteelblue;
+}
+
+.form {
+  z-index: 10000000;
+}
+
+.activeLink {
+  background-color: black;
+  color: white !important;
 }
 /*# sourceMappingURL=Main.css.map */

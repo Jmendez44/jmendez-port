@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  NavLink,
   Link,
   __RouterContext
 } from "react-router-dom";
@@ -20,9 +21,9 @@ const Routes = () => {
     <>
       <div className="links">
         <ul>
-          <NavLink to="/">HOME</NavLink>
-          <NavLink to="/projects">PROJECTS</NavLink>
-          <NavLink to="/contact">CONTACT</NavLink>
+          <NavLink exact to="/" activeClassName="activeLink">HOME</NavLink>
+          <NavLink exact to="/projects" activeClassName="activeLink" >PROJECTS</NavLink>
+          <NavLink exact to="/contact" activeClassName="activeLink" >CONTACT</NavLink>
         </ul>
       </div>
 
@@ -46,27 +47,27 @@ const Main = () => {
     initial: {transform: "scale(1) " },
     from: { transform: "scale(0.2) "  },
     enter: { transform: "scale(1) " },
-    leave: { transform: "scale(5) ", zIndex: -100  }
+    leave: { transform: "scale(4) ", zIndex: -100  }
   });
 
   return transitions.map(({ item, props: transition, key }) => (
     <animated.div className="main" key={key} style={transition}>
       <Switch location={item}>
         <Route exact path="/" component={Home} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/contact" component={Contact} />
+        <Route exact path="/projects" component={Projects} />
+        <Route exact path="/contact" component={Contact} />
       </Switch>
     </animated.div>
   ));
 };
 
-const NavLink = props => {
-  return (
-    <li>
-      <Link {...props} />
-    </li>
-  );
-};
+// const NavLink = props => {
+//   return (
+//     <li>
+//       <Link {...props} />
+//     </li>
+//   );
+// };
 
 // const NavLink = (props) => {
 //   return (

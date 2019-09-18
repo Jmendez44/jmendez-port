@@ -18,11 +18,10 @@ body {
       justify-content: center;
       align-items: center;
       height: 100%;
-      pointer-events: none;
+      // pointer-events: none;
       width: 100vw;
       position: absolute;
     }
-    
 
     .about-page {
       width: 80%;
@@ -45,11 +44,18 @@ body {
       // border: black solid;
     }
 
-    .me {
+    .icons {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 45%;
+    }
+
+    .me {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
       flex-wrap: wrap;
       // border: black solid;
       .unity {
@@ -190,11 +196,25 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: lightcoral;
-  
 }
 
 .contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
   width: 100vw;
   height: 100vh;
-  background-color: lightblue;
+  background: lightsteelblue;
+  
 }
+
+.form {
+  z-index: 10000000;
+}
+
+.activeLink {
+  background-color: black;
+  color: white !important;
+}
+

@@ -3,6 +3,7 @@ import "./css/Main.css";
 import { useSpring, animated } from "react-spring";
 import TypedReact from "./TypedReact";
 import Routes from "./Routes";
+import FloatingIcons from "./FloatingIcons";
 
 
 
@@ -57,6 +58,7 @@ const Home = () => {
   return (
     <div  className="about-page">
       <div className="code-box">
+      
         <TypedReact
           strings={[
             "Hello!^500 <br> my name is Jenuel^500 <br> but most call me Jay",
@@ -70,8 +72,8 @@ const Home = () => {
           ]}
         />
       </div>
-      <div className="about me">
-        <animated.i
+      <FloatingIcons />
+        {/* <animated.i
           style={{ transform: radians.interpolate(interp(1)) }}
           className="fab fa-html5 fa-5x"
         ></animated.i>
@@ -107,12 +109,12 @@ const Home = () => {
           src={require("./Assets/unity.png")}
           style={{ transform: radians.interpolate(interp(5)) }}
           className="unity"
-        />
+        /> */}
 
         
 
         
-      </div>
+      
     </div>
   );
 };

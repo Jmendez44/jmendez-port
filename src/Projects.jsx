@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <div onLoad={()=>setToggle(!isToggled)} className='projects-container'>
       <div className="me">
-        test
+     
       </div>
     </div>
   )

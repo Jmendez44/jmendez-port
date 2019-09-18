@@ -25,68 +25,63 @@ const Contact = () => {
     e.preventDefault();
   };
 
-  const handleChange = e => setValues({ ...form, [e.target.name]: e.target.value });
+  const handleChange = e =>
+    setValues({ ...form, [e.target.name]: e.target.value });
 
   const { name, email, message } = form;
 
   return (
     <>
       <div className="contact-container" id="contact">
-        <div className="contact-form">
-          <div className="form">
-            <form
-              name="contact"
-              method="POST"
-              onSubmit={handleSubmit}
-              data-netlify-honeypot="bot-field"
-              data-netlify="true"
-            >
-              <p className="form-stuff">
-                <label>
-                  Your Name
-                  <input
-                    type="name"
-                    name="name"
-                    value={name}
-                    onChange={handleChange}
-                    className="input-sizing"
-                  />
-                </label>
-              </p>
-              <p className="form-stuff">
-                <label>
-                  Your Email
-                  <input
-                    type="email"
-                    name="email"
-                    value={email}
-                    onChange={handleChange}
-                    className="input-sizing"
-                  />
-                </label>
-              </p>
-              <p className="form-stuff">
-                <label>
-                  Message
-                  <textarea
-                    name="message"
-                    value={message}
-                    onChange={handleChange}
-                    className="input-sizing"
-                    rows="10"
-                  />
-                </label>
-              </p>
-              <p className="btn-stuff">
-                <button className="submit" type="submit">
-                  Send
-                </button>
-              </p>
-            </form>
-          </div>
+        <div className="contact-wrapper">
+          <span>
+            <h1>CONTACT ME..</h1>
+            <h2 className="contact-me">Let's create something together! </h2>
+            <div className="social"></div>
+          </span>
+
+          <form
+            name="contact"
+            method="POST"
+            onSubmit={handleSubmit}
+            data-netlify-honeypot="bot-field"
+            data-netlify="true"
+          >
+            <p className="form-stuff">
+              <input
+                type="name"
+                name="name"
+                value={name}
+                onChange={handleChange}
+                placeholder="Name..."
+              />
+            </p>
+            <p className="form-stuff">
+              <input
+                type="email"
+                name="email"
+                value={email}
+                onChange={handleChange}
+                placeholder="Email..."
+              />
+            </p>
+            <p className="form-stuff msg">
+              <textarea
+                name="message"
+                value={message}
+                onChange={handleChange}
+                rows="10"
+                placeholder="Message..."
+              />
+            </p>
+            <p className="btn-stuff">
+              <button className="submit" type="submit">
+                Send
+              </button>
+            </p>
+          </form>
         </div>
-      </div>{" "}
-      */
+      </div>
     </>
   );
 };

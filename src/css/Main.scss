@@ -1,8 +1,180 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.App {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+}
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
 body {
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
 
   .App {
     overflow: hidden;
@@ -154,8 +326,6 @@ body {
     }
 
     .bottom-corner {
-      path {
-      }
       // position: relative;
     }
   }
@@ -193,28 +363,121 @@ body {
 }
 
 .projects-container {
-  width: 100vw;
-  height: 100vh;
-  background-color: lightcoral;
-}
-
-.contact-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  
   width: 100vw;
   height: 100vh;
-  background: lightsteelblue;
-  
+  background-color: #73ff9c;
+  .projects-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 80%;
+    border: blue solid 1px;
+    .project-card {
+      width: 44%;
+      height: 44%;
+      border: white solid 1px;
+    }
+  }
 }
 
-.form {
-  z-index: 10000000;
+.contact-container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+  background: #ff5964;
+  .contact-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #f7d602;
+    flex-wrap: wrap;
+    width: 65%;
+    height: 65%;
+    border: black solid;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: left;
+      flex-direction: column;
+      // border: #73FF9C solid;
+      height: 100%;
+      width: 44%;
+
+      mark {
+        // background: #f7d602;
+        
+      }
+
+      .social {
+        border: black solid;
+        margin-top: 25%;
+        padding-top: 10%;
+        height: 10%;
+        width: 100%;
+      }
+    }
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 35%;
+    height: 100%;
+    .btn-stuff {
+      width: 100%;
+      height: 8%;
+      button {
+        font-family: "Roboto", Helvetica, Arial, sans-serif;
+        width: 100%;
+        height: 100%;
+        border: black solid;
+        background: #ff5964;
+        margin-top: 1%;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+
+    .form-stuff {
+      display: flex;
+
+      flex-direction: column;
+      width: 100%;
+      height: 8%;
+
+      input {
+        border: 4px solid black;
+        height: 90%;
+        font-size: 1.5em;
+        font-family: "Roboto", Helvetica, Arial, sans-serif;
+      }
+      textarea {
+        border: 4px solid black;
+        height: 100%;
+        font-size: 1.5em;
+        font-family: "Roboto", Helvetica, Arial, sans-serif;
+      }
+    }
+  }
+}
+
+.msg {
+  height: 30% !important;
 }
 
 .activeLink {
   background-color: black;
   color: white !important;
 }
-

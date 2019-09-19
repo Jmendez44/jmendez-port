@@ -33,6 +33,13 @@ const Contact = () => {
   return (
     <>
       <div className="contact-container" id="contact">
+        <video
+          autoplay='true'
+          muted='true'
+          loop='true'
+          id="myVideo"
+          src={require("./Assets/People.mp4")}
+        ></video>
         <div className="contact-wrapper">
           <span>
             <h1>CONTACT ME..</h1>

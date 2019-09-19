@@ -193,6 +193,8 @@ body {
       // pointer-events: none;
       width: 100vw;
       position: absolute;
+
+
     }
 
     .about-page {
@@ -201,6 +203,7 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       .bottom {
         border: black solid;
         position: fixed;
@@ -368,19 +371,38 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: #73ff9c;
+  &:before {
+    content:"";
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    z-index:1;
+    // background: rgba(255, 255, 255, 0.342);
+  }
+  video {
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    min-width: 100%;
+    min-height: 100%;
+    filter: brightness(125%) grayscale(100%);
+  }
   .projects-wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    width: 80%;
-    height: 80%;
-    border: blue solid 1px;
+    width: 75%;
+    height: 75%;
+    border: black solid;
+    background: white;
     .project-card {
       width: 44%;
       height: 44%;
-      border: white solid 1px;
+      border: black solid 1px;
     }
   }
 }
@@ -393,12 +415,21 @@ body {
 
   width: 100vw;
   height: 100vh;
-  background: #ff5964;
+
+  video {
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  // background: #ff5964;
   .contact-wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: #f7d602;
+    background: white;
     flex-wrap: wrap;
     width: 65%;
     height: 65%;
@@ -415,7 +446,6 @@ body {
 
       mark {
         // background: #f7d602;
-        
       }
 
       .social {

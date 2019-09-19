@@ -43,6 +43,7 @@ const Home = () => {
 
   return (
     <div className="about-page">
+
       <div className="code-box">
         <TypedReact
           strings={[

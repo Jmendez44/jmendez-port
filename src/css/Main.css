@@ -488,7 +488,7 @@ body .App .lines {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 49%;
-  height: 48%;
+  height: 49%;
   background-color: #FE6847;
 }
 
@@ -512,17 +512,16 @@ body .App .lines {
           flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 2%;
+}
+
+.projects-container .projects-wrapper .project-card img {
+  width: 100%;
+  height: 100%;
 }
 
 .projects-container .projects-wrapper .project-card .description {
   font-size: 1.5em;
   width: 50%;
-}
-
-.projects-container .projects-wrapper .project-card img {
-  width: 50%;
-  height: 75%;
 }
 
 .contact-container {

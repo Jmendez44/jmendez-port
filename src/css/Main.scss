@@ -422,7 +422,7 @@ body {
       display: flex;
       flex-direction: column;
       width: 49%;
-      height: 48%;
+      height: 49%;
       background-color: $my-color1;
       // border: black solid 1px;
       h2 {
@@ -439,18 +439,22 @@ body {
       flex-direction: column;
       width: 100%;
       height: 100%;
-      padding: 2%;
-      // border: black solid 1px;
+
+      
+      // border: black solid 4px;
       // overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        // filter: grayscale(100%);
+
+      }
       .description {
         font-size: 1.5em;
         width: 50%;
       }
 
-      img {
-        width: 50%;
-        height: 75%;
-      }
+
     }
   }
 }

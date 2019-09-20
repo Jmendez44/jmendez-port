@@ -124,7 +124,7 @@ export default class FloatingIcons extends React.PureComponent {
                     Math.sin(r + 3 + (i * 2 * Math.PI) / 5)}px, 0)`
               )
             }}
-            src={require("./Assets/unity.png")}
+            src={require("./Assets/unity2.png")}
             className="unity"
           />
         </div>

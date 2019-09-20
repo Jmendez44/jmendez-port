@@ -133,14 +133,14 @@ table {
 
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
   -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 .App {
@@ -350,10 +350,8 @@ body .App .links ul a {
 }
 
 body .App .links ul a:hover {
-  background-color: black;
-  color: white;
-  text-transform: lowercase;
-  letter-spacing: 2.5px;
+  background-color: #FE6847;
+  color: black;
 }
 
 body .App .lines {
@@ -435,8 +433,6 @@ body .App .lines {
   z-index: -100;
   min-width: 100%;
   min-height: 100%;
-  -webkit-filter: brightness(125%) grayscale(100%);
-          filter: brightness(125%) grayscale(100%);
 }
 
 .projects-container .projects-wrapper {
@@ -452,14 +448,81 @@ body .App .lines {
       flex-wrap: wrap;
   width: 75%;
   height: 75%;
-  border: black solid;
-  background: white;
+}
+
+.projects-container .projects-wrapper .proj-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 50%;
+  height: 10%;
+}
+
+.projects-container .projects-wrapper button {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  border: #FE6847 solid 1px;
+  background: #FE6847;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.projects-container .projects-wrapper .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 49%;
+  height: 48%;
+  background-color: #FE6847;
+}
+
+.projects-container .projects-wrapper .title h2 {
+  text-align: center;
 }
 
 .projects-container .projects-wrapper .project-card {
-  width: 44%;
-  height: 44%;
-  border: black solid 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 2%;
+}
+
+.projects-container .projects-wrapper .project-card .description {
+  font-size: 1.5em;
+  width: 50%;
+}
+
+.projects-container .projects-wrapper .project-card img {
+  width: 50%;
+  height: 75%;
 }
 
 .contact-container {
@@ -560,7 +623,7 @@ body .App .lines {
   width: 100%;
   height: 100%;
   border: black solid;
-  background: #ff5964;
+  background: #FE6847;
   margin-top: 1%;
   font-size: 1.5rem;
   font-weight: bold;
@@ -597,7 +660,8 @@ body .App .lines {
 }
 
 .activeLink {
-  background-color: black;
-  color: white !important;
+  background-color: #FE6847;
+  border: black solid;
+  color: black !important;
 }
 /*# sourceMappingURL=Main.css.map */

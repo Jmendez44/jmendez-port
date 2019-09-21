@@ -350,7 +350,7 @@ body .App .links ul a {
 }
 
 body .App .links ul a:hover {
-  background-color: #FE6847;
+  background-color: #fe6847;
   color: black;
 }
 
@@ -472,14 +472,15 @@ body .App .lines {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   width: 100%;
   height: 100%;
-  border: #FE6847 solid 1px;
-  background: #FE6847;
+  border: #fe6847 solid 1px;
+  background: #fe6847;
   padding: 0;
   font-size: 1rem;
   font-weight: bold;
 }
 
 .projects-container .projects-wrapper .title {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -487,13 +488,47 @@ body .App .lines {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 49%;
+  width: 49.5%;
   height: 49%;
-  background-color: #FE6847;
+  border: black solid 4px;
+  overflow: hidden;
+}
+
+.projects-container .projects-wrapper .title .ani {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fe6847;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.projects-container .projects-wrapper .title .ani1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fe6847;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.projects-container .projects-wrapper .title .ani2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fe6847;
+  z-index: 100;
+  pointer-events: none;
 }
 
 .projects-container .projects-wrapper .title h2 {
   text-align: center;
+}
+
+.projects-container .projects-wrapper .title .more {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .projects-container .projects-wrapper .project-card {
@@ -505,18 +540,21 @@ body .App .lines {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: white;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
   height: 100%;
+  z-index: 20;
 }
 
 .projects-container .projects-wrapper .project-card img {
   width: 100%;
   height: 100%;
+  z-index: -2;
+  -webkit-filter: saturate(75%);
+          filter: saturate(75%);
 }
 
 .projects-container .projects-wrapper .project-card .description {
@@ -622,7 +660,7 @@ body .App .lines {
   width: 100%;
   height: 100%;
   border: black solid;
-  background: #FE6847;
+  background: #fe6847;
   margin-top: 1%;
   font-size: 1.5rem;
   font-weight: bold;
@@ -659,7 +697,7 @@ body .App .lines {
 }
 
 .activeLink {
-  background-color: #FE6847;
+  background-color: #fe6847;
   border: black solid;
   color: black !important;
 }

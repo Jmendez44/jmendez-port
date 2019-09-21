@@ -1,4 +1,4 @@
-$my-color1: #FE6847;
+$my-color1: #fe6847;
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
 
@@ -313,8 +313,7 @@ body {
           &:hover {
             background-color: $my-color1;
             color: black;
-            
-            
+
             // font-style: italic;
           }
         }
@@ -399,6 +398,7 @@ body {
     height: 75%;
     // border: black solid;
     // background: white;
+
     .proj-btns {
       display: flex;
       flex-direction: row;
@@ -419,45 +419,86 @@ body {
       font-weight: bold;
     }
     .title {
+      position: relative;
       display: flex;
       flex-direction: column;
-      width: 49%;
+      width: 49.5%;
       height: 49%;
-      background-color: $my-color1;
+      border: black solid 4px;
+      // background-color: $my-color1;
+      overflow: hidden;
+      
       // border: black solid 1px;
+      .ani {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #fe6847;
+        z-index: 100;
+        pointer-events: none;
+      }
+      .ani1 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #fe6847;
+        z-index: 100;
+        pointer-events: none;
+      }
+
+      .ani2 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #fe6847;
+        z-index: 100;
+        pointer-events: none;
+      }
       h2 {
         text-align: center;
         // border-bottom: black solid 1px;
-        
+      }
+
+      .more {
+        width: 100%;
+        height: 100%;
+        // background: #fe6847;
+
+        overflow: hidden;
       }
     }
     .project-card {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      background-color: white;
+
       flex-direction: column;
       width: 100%;
       height: 100%;
-
+      z-index: 20;
       
-      // border: black solid 4px;
+
       // overflow: hidden;
       img {
         width: 100%;
         height: 100%;
-        // filter: grayscale(100%);
-
+        z-index: -2;
+        filter: saturate(75%);
       }
       .description {
         font-size: 1.5em;
         width: 50%;
       }
-
-
     }
   }
 }
+
+// .ani {
+//   width: 100%;
+//   height: 100%;
+//   background: #FE6847;
+//   z-index: 120;
+// }
 
 .contact-container {
   box-sizing: border-box;

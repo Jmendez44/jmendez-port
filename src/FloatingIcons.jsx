@@ -19,7 +19,7 @@ export default class FloatingIcons extends React.PureComponent {
       this.state.items.map((_, i) => (
         <div className="about me">
           <animated.i
-            key={i}
+            key={1}
             style={{
               willChange: "transform",
               transform: radians.interpolate(
@@ -31,7 +31,7 @@ export default class FloatingIcons extends React.PureComponent {
             className="fab fa-html5 fa-5x"
           ></animated.i>
           <animated.i
-            key={i}
+            key={2}
             style={{
               willChange: "transform",
               transform: radians.interpolate(
@@ -43,7 +43,7 @@ export default class FloatingIcons extends React.PureComponent {
             className="fab fa-node fa-5x"
           ></animated.i>
           <animated.i
-            key={i}
+            key={3}
             style={{
               willChange: "transform",
               transform: radians.interpolate(
@@ -55,7 +55,7 @@ export default class FloatingIcons extends React.PureComponent {
             className="fab fa-react fa-5x"
           ></animated.i>
           <animated.i
-            key={i}
+            key={4}
             style={{
               willChange: "transform",
               transform: radians.interpolate(
@@ -67,7 +67,7 @@ export default class FloatingIcons extends React.PureComponent {
             className="fab fa-css3-alt fa-5x"
           ></animated.i>
           <animated.i
-            key={i}
+            key={5}
             style={{
               willChange: "transform",
               transform: radians.interpolate(
@@ -79,7 +79,7 @@ export default class FloatingIcons extends React.PureComponent {
             className="fab fa-python fa-5x"
           ></animated.i>
           <animated.i
-            key={i}
+            key={6}
             style={{
               willChange: "transform",
               transform: radians.interpolate(
@@ -91,7 +91,7 @@ export default class FloatingIcons extends React.PureComponent {
             className="fab fa-adobe fa-5x"
           ></animated.i>
           <animated.i
-            key={i}
+            key={7}
             style={{
               willChange: "transform",
               transform: radians.interpolate(
@@ -103,7 +103,7 @@ export default class FloatingIcons extends React.PureComponent {
             className="fab fa-js fa-5x"
           ></animated.i>
           <animated.i
-            key={i}
+            key={8}
             style={{
               willChange: "transform",
               transform: radians.interpolate(
@@ -115,7 +115,7 @@ export default class FloatingIcons extends React.PureComponent {
             className="fab fa-github fa-5x"
           ></animated.i>
           <animated.img
-            key={i}
+            key={9}
             style={{
               willChange: "transform",
               transform: radians.interpolate(
@@ -135,6 +135,7 @@ export default class FloatingIcons extends React.PureComponent {
     return (
       <div className="about icons">
         <Container
+        
           reset
           native
           keys={items}

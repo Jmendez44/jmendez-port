@@ -498,7 +498,7 @@ body .App .lines {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #fe6847;
+  background: white;
   z-index: 100;
   pointer-events: none;
 }
@@ -507,7 +507,7 @@ body .App .lines {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #fe6847;
+  background: white;
   z-index: 100;
   pointer-events: none;
 }
@@ -516,7 +516,7 @@ body .App .lines {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #fe6847;
+  background: white;
   z-index: 100;
   pointer-events: none;
 }
@@ -700,5 +700,74 @@ body .App .lines {
   background-color: #fe6847;
   border: black solid;
   color: black !important;
+}
+
+.ani-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #fe6847;
+  color: white;
+}
+
+.ani-wrapper h1 {
+  text-align: center;
+  width: 100%;
+  color: black;
+  border-bottom: black solid 4px;
+  font-size: 2em;
+}
+
+.ani-wrapper .ani-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.ani-wrapper .ani-content .ani-description {
+  border-right: black solid 1px;
+  width: 50%;
+  height: 80%;
+}
+
+.ani-wrapper .ani-content .ani-skills {
+  height: 80%;
+  width: 50%;
+}
+
+.ani-wrapper .ani-content .ani-btns {
+  width: 100%;
+  height: 8%;
+}
+
+.ani-wrapper .ani-content .ani-btns a {
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  border: black solid;
+  background: #fe6847;
+  margin-top: 1%;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 /*# sourceMappingURL=Main.css.map */

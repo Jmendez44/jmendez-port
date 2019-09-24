@@ -8,13 +8,16 @@ const Projects = () => {
   const [isToggled1, setToggle1] = useState(false);
   const [isToggled2, setToggle2] = useState(false);
   const cardAni = useSpring({
+    pointerEvents: isToggled ? "all" : "none",
     transform: isToggled ? "translate(0,0)" : "translate(0,-100%)"
   });
   const cardAni1 = useSpring({
+    pointerEvents: isToggled1 ? "all" : "none",
     transform: isToggled1 ? "translate(0,0)" : "translate(0,-100%)"
   });
 
   const cardAni2 = useSpring({
+    pointerEvents: isToggled2 ? "all" : "none",
     transform: isToggled2 ? "translate(0,0)" : "translate(0,-100%)"
   });
 
@@ -28,9 +31,9 @@ const Projects = () => {
   return (
     <div className="projects-container">
       <video
-        autoplay="true"
-        muted="true"
-        loop="true"
+        autoPlay={true}
+        muted={true}
+        loop={true}
         id="myVideo"
         src={require("./Assets/cloudy.mp4")}
       ></video>
@@ -40,7 +43,31 @@ const Projects = () => {
           onMouseLeave={() => setToggle(!isToggled)}
           className="title"
         >
-          <animated.div style={cardAni} className="ani"></animated.div>
+          <animated.div style={cardAni} className="ani">
+            {" "}
+            <div className="ani-wrapper">
+              <h1>Title</h1>
+              <div className="ani-content">
+                <div className="ani-description">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Consequuntur ea corporis unde nisi, provident voluptate quae
+                  sit autem voluptatum, cum, doloribus quo odio corrupti numquam
+                  dolore accusamus cupiditate illo! Tempora.
+                </div>
+                <div className="ani-skills">
+                  React
+                </div>
+                <div className="ani-btns">
+                  <a href="https://callcomplain.netlify.com" target="_blank">
+                    site
+                  </a>
+                  <a href="http://google.com" target="_blank">
+                    github
+                  </a>
+                </div>
+              </div>
+            </div>
+          </animated.div>
           <div className="project-card griipe">
             <img src={require("./Assets/2019-09-2002-02-59_Trim.gif")} />
           </div>
@@ -50,7 +77,30 @@ const Projects = () => {
           onMouseLeave={() => setToggle1(!isToggled1)}
           className="title"
         >
-          <animated.div style={cardAni1} className="ani1"></animated.div>
+          <animated.div style={cardAni1} className="ani1">
+            <div className="ani-wrapper">
+              <h1>Title</h1>
+              <div className="ani-content">
+                <div className="ani-description">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Consequuntur ea corporis unde nisi, provident voluptate quae
+                  sit autem voluptatum, cum, doloribus quo odio corrupti numquam
+                  dolore accusamus cupiditate illo! Tempora.
+                </div>
+                <div className="ani-skills">
+                  React
+                </div>
+                <div className="ani-btns">
+                  <a href="http://google.com" target="_blank">
+                    site
+                  </a>
+                  <a href="http://google.com" target="_blank">
+                    github
+                  </a>
+                </div>
+              </div>
+            </div>
+          </animated.div>
           <div className="project-card griipe">
             <img src={require("./Assets/cgol.gif")} />
           </div>
@@ -61,7 +111,31 @@ const Projects = () => {
           onMouseLeave={() => setToggle2(!isToggled2)}
           className="title"
         >
-          <animated.div style={cardAni2} className="ani2"></animated.div>
+          <animated.div style={cardAni2} className="ani2">
+            {" "}
+            <div className="ani-wrapper">
+              <h1>Title</h1>
+              <div className="ani-content">
+                <div className="ani-description">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Consequuntur ea corporis unde nisi, provident voluptate quae
+                  sit autem voluptatum, cum, doloribus quo odio corrupti numquam
+                  dolore accusamus cupiditate illo! Tempora.
+                </div>
+                <div className="ani-skills">
+                  React
+                </div>
+                <div className="ani-btns">
+                  <a href="http://google.com" target="_blank">
+                    site
+                  </a>
+                  <a href="http://google.com" target="_blank">
+                    github
+                  </a>
+                </div>
+              </div>
+            </div>
+          </animated.div>
           <div className="project-card griipe">
             <img src={require("./Assets/Capture.PNG")} />
           </div>

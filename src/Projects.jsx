@@ -7,6 +7,9 @@ const Projects = () => {
   const [isToggled, setToggle] = useState(false);
   const [isToggled1, setToggle1] = useState(false);
   const [isToggled2, setToggle2] = useState(false);
+  const [colorOrange, setColor] = useState(false);
+  const [colorOrange1, setColor1] = useState(false);
+  const [colorOrange2, setColor2] = useState(false);
   const cardAni = useSpring({
     pointerEvents: isToggled ? "all" : "none",
     transform: isToggled ? "translate(0,0)" : "translate(0,-100%)"
@@ -15,19 +18,23 @@ const Projects = () => {
     pointerEvents: isToggled1 ? "all" : "none",
     transform: isToggled1 ? "translate(0,0)" : "translate(0,-100%)"
   });
-
   const cardAni2 = useSpring({
     pointerEvents: isToggled2 ? "all" : "none",
     transform: isToggled2 ? "translate(0,0)" : "translate(0,-100%)"
   });
+  const colorToOrange = useSpring({
+    backgroundColor: colorOrange ? "#fa5b3d" : "#DDDDDD",
+    transform: colorOrange ? "scale(1.2)" : "scale(1)"
+  });
+  const colorToOrange1 = useSpring({
+    backgroundColor: colorOrange1 ? "#fa5b3d" : "#DDDDDD",
+    transform: colorOrange1 ? "scale(1.2)" : "scale(1)"
+  });
+  const colorToOrange2 = useSpring({
+    backgroundColor: colorOrange2 ? "#fa5b3d" : "#DDDDDD",
+    transform: colorOrange2 ? "scale(1.2)" : "scale(1)"
+  });
 
-  // const fade = useSpring({
-  //   from: {
-  //     opacity: 0
-  //   },
-  //   opacity: 1
-  // });
-  console.log(isToggled);
   return (
     <div className="projects-container">
       <video
@@ -38,32 +45,59 @@ const Projects = () => {
         src={require("./Assets/cloudy.mp4")}
       ></video>
       <div className="projects-wrapper">
-        <div
-          onMouseEnter={() => setToggle(!isToggled)}
-          onMouseLeave={() => setToggle(!isToggled)}
-          className="title"
-        >
+        <div className="title">
+          <animated.button
+            className="toggle"
+            onMouseOver={() => setColor(!colorOrange)}
+            onMouseOut={() => setColor(!colorOrange)}
+            onClick={() => setToggle(!isToggled)}
+            style={colorToOrange}
+          >
+            Project Info
+          </animated.button>
           <animated.div style={cardAni} className="ani">
-            {" "}
+            <div className="ani-btns">
+              <a className="blk" href="#" target="_blank">
+                Website
+              </a>
+              <a
+                className="blk"
+                href="https://callcomplain.netlify.com"
+                target="_blank"
+              >
+                Github
+              </a>
+              <a onClick={() => setToggle(!isToggled)}>Close</a>
+            </div>
+
             <div className="ani-wrapper">
-              <h1>Title</h1>
+              <h1>GRIIPE</h1>
               <div className="ani-content">
                 <div className="ani-description">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Consequuntur ea corporis unde nisi, provident voluptate quae
-                  sit autem voluptatum, cum, doloribus quo odio corrupti numquam
-                  dolore accusamus cupiditate illo! Tempora.
+                  <h3>Goal of this project:</h3>
+                  <ul className="goal">
+                    <li>
+                      Facilitate the ability for retail customers to send
+                      complaints privately and/or publicly
+                    </li>
+                    <li>This was a team project with 3 other people </li>
+                    <li>Project was built in a months time</li>
+                  </ul>
                 </div>
                 <div className="ani-skills">
-                  React
-                </div>
-                <div className="ani-btns">
-                  <a href="https://callcomplain.netlify.com" target="_blank">
-                    site
-                  </a>
-                  <a href="http://google.com" target="_blank">
-                    github
-                  </a>
+                  <h3>Language/Frameworks:</h3>
+                  <ul className="languages">
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>Firebase</li>
+                  </ul>
+                  <h3>API's:</h3>
+                  <ul className="apis">
+                    <li>Deepgram</li>
+                    <li>Google Places</li>
+                    <li>Twitter</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -72,31 +106,59 @@ const Projects = () => {
             <img src={require("./Assets/2019-09-2002-02-59_Trim.gif")} />
           </div>
         </div>
-        <div
-          onMouseEnter={() => setToggle1(!isToggled1)}
-          onMouseLeave={() => setToggle1(!isToggled1)}
-          className="title"
-        >
+
+        <div className="title">
+          <animated.button
+            className="toggle"
+            onMouseOver={() => setColor1(!colorOrange1)}
+            onMouseOut={() => setColor1(!colorOrange1)}
+            onClick={() => setToggle1(!isToggled1)}
+            style={colorToOrange1}
+          >
+            Project Info
+          </animated.button>
           <animated.div style={cardAni1} className="ani1">
+            <div className="ani-btns">
+              <a className="blk" href="#" target="_blank">
+                Website
+              </a>
+              <a
+                className="blk"
+                href="https://callcomplain.netlify.com"
+                target="_blank"
+              >
+                Github
+              </a>
+              <a onClick={() => setToggle1(!isToggled1)}>Close</a>
+            </div>
             <div className="ani-wrapper">
               <h1>Title</h1>
               <div className="ani-content">
                 <div className="ani-description">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Consequuntur ea corporis unde nisi, provident voluptate quae
-                  sit autem voluptatum, cum, doloribus quo odio corrupti numquam
-                  dolore accusamus cupiditate illo! Tempora.
+                  Goal of this project:
+                  <ul className="goal">
+                    <li>
+                      Facilitate the ability for retail customers to send
+                      complaints privately and/or publicly
+                    </li>
+                    <li>This was a team project with 3 other people </li>
+                    <li>Project was built in a months time</li>
+                  </ul>
                 </div>
                 <div className="ani-skills">
-                  React
-                </div>
-                <div className="ani-btns">
-                  <a href="http://google.com" target="_blank">
-                    site
-                  </a>
-                  <a href="http://google.com" target="_blank">
-                    github
-                  </a>
+                  <h3>Language/Frameworks:</h3>
+                  <ul className="languages">
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>Firebase handling our OAuth</li>
+                  </ul>
+                  <h3>API's:</h3>
+                  <ul className="apis">
+                    <li>Deepgram api to transcribe recorded messages</li>
+                    <li>Google Places api</li>
+                    <li>Twitter api</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -106,35 +168,62 @@ const Projects = () => {
           </div>
         </div>
 
-        <div
-          onMouseEnter={() => setToggle2(!isToggled2)}
-          onMouseLeave={() => setToggle2(!isToggled2)}
-          className="title"
-        >
+        <div className="title">
+          <animated.button
+            className="toggle"
+            onMouseOver={() => setColor2(!colorOrange2)}
+            onMouseOut={() => setColor2(!colorOrange2)}
+            style={colorToOrange2}
+            onClick={() => setToggle2(!isToggled2)}
+          >
+            Project Info
+          </animated.button>
           <animated.div style={cardAni2} className="ani2">
-            {" "}
+            <div className="ani-btns">
+              <a className="blk" href="#" target="_blank">
+                Website
+              </a>
+              <a
+                className="blk"
+                href="https://callcomplain.netlify.com"
+                target="_blank"
+              >
+                Github
+              </a>
+              <a onClick={() => setToggle2(!isToggled2)}>Close</a>
+            </div>
             <div className="ani-wrapper">
               <h1>Title</h1>
               <div className="ani-content">
                 <div className="ani-description">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Consequuntur ea corporis unde nisi, provident voluptate quae
-                  sit autem voluptatum, cum, doloribus quo odio corrupti numquam
-                  dolore accusamus cupiditate illo! Tempora.
+                  Goal of this project:
+                  <ul className="goal">
+                    <li>
+                      Facilitate the ability for retail customers to send
+                      complaints privately and/or publicly
+                    </li>
+                    <li>This was a team project with 3 other people </li>
+                    <li>Project was built in a months time</li>
+                  </ul>
                 </div>
                 <div className="ani-skills">
-                  React
-                </div>
-                <div className="ani-btns">
-                  <a href="http://google.com" target="_blank">
-                    site
-                  </a>
-                  <a href="http://google.com" target="_blank">
-                    github
-                  </a>
+                  <ul className="languages">
+                    <h3>Language/Frameworks:</h3>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>Firebase handling our OAuth</li>
+                  </ul>
+                  <ul className="apis">
+                    <h3>API's:</h3>
+                    <li>Deepgram api to transcribe recorded messages</li>
+                    <li>Google Places api</li>
+                    <li>Twitter api</li>
+                  </ul>
                 </div>
               </div>
             </div>
+            v
           </animated.div>
           <div className="project-card griipe">
             <img src={require("./Assets/Capture.PNG")} />

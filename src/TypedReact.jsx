@@ -11,8 +11,8 @@ class TypedReact extends React.Component {
     // You can pass other options here, such as typing speed, back speed, etc.
     const options = {
       strings: strings,
-      typeSpeed: 10,
-      backSpeed: 10
+      typeSpeed: 20,
+      backSpeed: 20
     };
     // this.el refers to the <span> in the render() method
     this.typed = new Typed(this.el, options);

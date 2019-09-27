@@ -23,27 +23,27 @@ const Projects = () => {
     transform: isToggled2 ? "translate(0,0)" : "translate(0,-100%)"
   });
   const colorToOrange = useSpring({
-    backgroundColor: colorOrange ? "#fa5b3d" : "#DDDDDD",
+    backgroundColor: colorOrange ? "#fa5b3d" : "white",
     transform: colorOrange ? "scale(1.2)" : "scale(1)"
   });
   const colorToOrange1 = useSpring({
-    backgroundColor: colorOrange1 ? "#fa5b3d" : "#DDDDDD",
+    backgroundColor: colorOrange1 ? "#fa5b3d" : "white",
     transform: colorOrange1 ? "scale(1.2)" : "scale(1)"
   });
   const colorToOrange2 = useSpring({
-    backgroundColor: colorOrange2 ? "#fa5b3d" : "#DDDDDD",
+    backgroundColor: colorOrange2 ? "#fa5b3d" : "white",
     transform: colorOrange2 ? "scale(1.2)" : "scale(1)"
   });
 
   return (
     <div className="projects-container">
-      <video
+      {/* <video
         autoPlay={true}
         muted={true}
         loop={true}
         id="myVideo"
         src={require("./Assets/cloudy.mp4")}
-      ></video>
+      ></video> */}
       <div className="projects-wrapper">
         <div className="title">
           <animated.button
@@ -85,7 +85,7 @@ const Projects = () => {
                   </ul>
                 </div>
                 <div className="ani-skills">
-                  <h3>Language/Frameworks:</h3>
+                  <h3>Technologies:</h3>
                   <ul className="languages">
                     <li>React</li>
                     <li>Node.js</li>
@@ -132,32 +132,30 @@ const Projects = () => {
               <a onClick={() => setToggle1(!isToggled1)}>Close</a>
             </div>
             <div className="ani-wrapper">
-              <h1>Title</h1>
+              <h1>Conway's Game of Life</h1>
               <div className="ani-content">
                 <div className="ani-description">
                   Goal of this project:
                   <ul className="goal">
                     <li>
-                      Facilitate the ability for retail customers to send
-                      complaints privately and/or publicly
+                      ...
                     </li>
-                    <li>This was a team project with 3 other people </li>
-                    <li>Project was built in a months time</li>
+
                   </ul>
                 </div>
                 <div className="ani-skills">
-                  <h3>Language/Frameworks:</h3>
+                  <h3>Technologies:</h3>
                   <ul className="languages">
-                    <li>React</li>
-                    <li>Node.js</li>
-                    <li>Express</li>
-                    <li>Firebase handling our OAuth</li>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
                   </ul>
                   <h3>API's:</h3>
                   <ul className="apis">
-                    <li>Deepgram api to transcribe recorded messages</li>
-                    <li>Google Places api</li>
-                    <li>Twitter api</li>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
                   </ul>
                 </div>
               </div>
@@ -193,33 +191,27 @@ const Projects = () => {
               <a onClick={() => setToggle2(!isToggled2)}>Close</a>
             </div>
             <div className="ani-wrapper">
-              <h1>Title</h1>
+              <h1>International Rural School Report</h1>
               <div className="ani-content">
                 <div className="ani-description">
                   Goal of this project:
                   <ul className="goal">
                     <li>
-                      Facilitate the ability for retail customers to send
-                      complaints privately and/or publicly
+                      .....
                     </li>
-                    <li>This was a team project with 3 other people </li>
-                    <li>Project was built in a months time</li>
+
                   </ul>
                 </div>
                 <div className="ani-skills">
+                  <h3>Technologies:</h3>
                   <ul className="languages">
-                    <h3>Language/Frameworks:</h3>
-                    <li>React</li>
-                    <li>Node.js</li>
-                    <li>Express</li>
-                    <li>Firebase handling our OAuth</li>
+                    
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>LESS</li>
                   </ul>
-                  <ul className="apis">
-                    <h3>API's:</h3>
-                    <li>Deepgram api to transcribe recorded messages</li>
-                    <li>Google Places api</li>
-                    <li>Twitter api</li>
-                  </ul>
+                  
                 </div>
               </div>
             </div>

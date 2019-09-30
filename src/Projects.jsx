@@ -57,12 +57,12 @@ const Projects = () => {
           </animated.button>
           <animated.div style={cardAni} className="ani">
             <div className="ani-btns">
-              <a className="blk" href="#" target="_blank">
+              <a className="blk" href="https://callcomplain.netlify.com" target="_blank">
                 Website
               </a>
               <a
                 className="blk"
-                href="https://callcomplain.netlify.com"
+                href="https://github.com/labs12-call-complain/labs-call-back-FE"
                 target="_blank"
               >
                 Github
@@ -78,10 +78,10 @@ const Projects = () => {
                   <ul className="goal">
                     <li>
                       Facilitate the ability for retail customers to send
-                      complaints privately and/or publicly
+                      complaints privately and/or publicly.
                     </li>
-                    <li>This was a team project with 3 other people </li>
-                    <li>Project was built in a months time</li>
+                    <li>This was a team project with 3 other people.</li>
+                    <li>Project was built in a months time.</li>
                   </ul>
                 </div>
                 <div className="ani-skills">
@@ -178,12 +178,12 @@ const Projects = () => {
           </animated.button>
           <animated.div style={cardAni2} className="ani2">
             <div className="ani-btns">
-              <a className="blk" href="#" target="_blank">
+              <a className="blk" href="https://keen-mccarthy-75ca2a.netlify.com/" target="_blank">
                 Website
               </a>
               <a
                 className="blk"
-                href="https://callcomplain.netlify.com"
+                href="https://github.com/irsr2/Web-UI-Dev-2"
                 target="_blank"
               >
                 Github
@@ -194,11 +194,14 @@ const Projects = () => {
               <h1>International Rural School Report</h1>
               <div className="ani-content">
                 <div className="ani-description">
-                  Goal of this project:
+                  Project Info:
                   <ul className="goal">
                     <li>
-                      .....
+                    The goal of this project is to Help third world countries get access to school supplies.
                     </li>
+                    <li>Fully responsive design.</li>
+                    <li>This was a team project with 4 other people. I was in charge of designing and coding the Landing page.</li>
+                    <li>This was a week long project.</li>
 
                   </ul>
                 </div>

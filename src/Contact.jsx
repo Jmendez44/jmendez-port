@@ -24,7 +24,6 @@ const Contact = () => {
 
     e.preventDefault();
   };
-  
 
   const isMobile = e => {
     if (window.innerWidth < 800) {
@@ -32,9 +31,9 @@ const Contact = () => {
     } else {
       return true;
     }
-  }
+  };
 
-  console.log(isMobile())
+  console.log(isMobile());
 
   const handleChange = e =>
     setValues({ ...form, [e.target.name]: e.target.value });
@@ -45,11 +44,10 @@ const Contact = () => {
     <>
       <div className="contact-container" id="contact">
         <video
-          
           autoPlay={`${isMobile()}`}
           muted
           loop
-          playsinline
+          playsInline="true"
           id="myVideo"
           src={require("./Assets/People.mp4")}
         ></video>
@@ -101,10 +99,18 @@ const Contact = () => {
           </form>
           <span className="social-links">
             <div className="social">
-              <a href="">Github</a>
-              <a href="">LinkedIn</a>
-              <a href="">Resume</a>
-              <a href="">Email</a>
+              <a href="https://github.com/Jmendez44" target="_blank">
+                Github
+              </a>
+              <a href="https://www.linkedin.com/in/jenuel-mendez/" target="_blank">
+                LinkedIn
+              </a>
+              <a href={require("./Assets/CreddleResume.pdf")} target="_blank">
+                Resume
+              </a>
+              <a href="mailto:Jenuel.mendez@gmail.com" target="_blank">
+                Email
+              </a>
             </div>
           </span>
         </div>

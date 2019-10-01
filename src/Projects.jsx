@@ -43,18 +43,18 @@ const Projects = () => {
         src={require("./Assets/cloudy.mp4")}
       ></video> */}
       <div className="projects-wrapper">
-        <div className="title more-info">
-          <h2>This portfolio was made with:</h2>
+        <div className="more-info">
+          <h2>This portfolio was made with</h2>
           <ul>
-            
+            <li>HTML</li>
+            <li>SASS</li>
             <li>React</li>
             <li>React Spring</li>
-            <li>SASS</li>
             <li>Typed.js</li>
           </ul>
           <a
             className="blk"
-            href="https://github.com/labs12-call-complain/labs-call-back-FE"
+            href="https://github.com/Jmendez44/jmendez-port/tree/master"
             target="_blank"
           >
             Github

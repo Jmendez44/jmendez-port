@@ -612,6 +612,112 @@ body .App .lines {
   font-weight: bold;
 }
 
+.projects-container .projects-wrapper .more-info {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 49.5%;
+  height: 49%;
+  border: white solid 4px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1% 1% 1%;
+}
+
+@media screen and (max-width: 800px) {
+  .projects-container .projects-wrapper .more-info {
+    font-size: 3.5vw;
+    width: 100%;
+    height: 25%;
+  }
+}
+
+.projects-container .projects-wrapper .more-info h2 {
+  border-bottom: solid black;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  .projects-container .projects-wrapper .more-info h2 {
+    font-size: 4vw;
+  }
+}
+
+.projects-container .projects-wrapper .more-info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projects-container .projects-wrapper .more-info ul li {
+  margin-top: 2vh;
+  text-align: center;
+  width: 100%;
+  font-size: 1vw;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  .projects-container .projects-wrapper .more-info ul li {
+    font-size: 3.5vw;
+    margin-top: 1vh;
+  }
+}
+
+.projects-container .projects-wrapper .more-info .blk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  width: 12%;
+  height: 10%;
+  border: black solid;
+  margin-bottom: 1vh;
+  font-size: 1vw !important;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 110;
+}
+
+@media screen and (max-width: 800px) {
+  .projects-container .projects-wrapper .more-info .blk {
+    font-size: 3vw !important;
+    width: 15%;
+  }
+}
+
+.projects-container .projects-wrapper .more-info .blk:hover {
+  background-color: #fa5b3d;
+  color: black;
+}
+
 .projects-container .projects-wrapper .title {
   position: relative;
   display: -webkit-box;
@@ -650,6 +756,12 @@ body .App .lines {
   cursor: pointer;
   z-index: 150;
   overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  .projects-container .projects-wrapper .title .toggle {
+    font-size: 1.7vw;
+  }
 }
 
 .projects-container .projects-wrapper .title .ani {
@@ -995,6 +1107,12 @@ body .App .lines {
   font-size: 1.5vw;
 }
 
+@media screen and (max-width: 800px) {
+  .ani-wrapper h1 {
+    font-size: 4vw;
+  }
+}
+
 .ani-wrapper .ani-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1027,6 +1145,12 @@ body .App .lines {
   border-top: black solid;
 }
 
+@media screen and (max-width: 800px) {
+  .ani-wrapper .ani-content .goal {
+    font-size: 2.5vw;
+  }
+}
+
 .ani-wrapper .ani-content .ani-skills {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1057,6 +1181,12 @@ body .App .lines {
   margin-right: 1vw;
 }
 
+@media screen and (max-width: 800px) {
+  .ani-wrapper .ani-content .ani-skills .languages li {
+    font-size: 2.5vw;
+  }
+}
+
 .ani-wrapper .ani-content .ani-skills .apis {
   font-size: .80vw;
   display: -webkit-box;
@@ -1067,6 +1197,12 @@ body .App .lines {
           justify-content: space-between;
   border-top: black solid;
   height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .ani-wrapper .ani-content .ani-skills .apis {
+    font-size: 2.5vw;
+  }
 }
 
 .ani-btns {
@@ -1105,9 +1241,14 @@ body .App .lines {
   height: 100%;
   border: black solid;
   background: #fa5b3d;
-  font-size: 1vw !important;
-  font-size: 1rem;
+  font-size: 1vw;
   font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  .ani-btns a {
+    font-size: 2vw;
+  }
 }
 
 .ani-btns a:hover {
@@ -1119,6 +1260,12 @@ body .App .lines {
   font-size: 1vw;
   background-color: white;
   color: black;
+}
+
+@media screen and (max-width: 800px) {
+  .ani-btns .blk {
+    font-size: 2vw;
+  }
 }
 
 .ani-btns .blk:hover {

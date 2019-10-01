@@ -4,7 +4,7 @@ const Borders = () => {
   return (
     <>
       <svg
-        className="bottom-corner"
+        
         className="lines"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"

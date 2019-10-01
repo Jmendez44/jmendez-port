@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 import {
-  BrowserRouter as Router,
+  
   Switch,
   Route,
   NavLink,
-  Link,
   __RouterContext
 } from "react-router-dom";
 import { animated, useTransition } from "react-spring";
@@ -21,9 +20,15 @@ const Routes = () => {
     <>
       <div className="links">
         <ul>
-          <NavLink exact to="/" activeClassName="activeLink">HOME</NavLink>
-          <NavLink exact to="/projects" activeClassName="activeLink" >PROJECTS</NavLink>
-          <NavLink exact to="/contact" activeClassName="activeLink" >CONTACT</NavLink>
+          <NavLink exact to="/" activeClassName="activeLink">
+            HOME
+          </NavLink>
+          <NavLink exact to="/projects" activeClassName="activeLink">
+            PROJECTS
+          </NavLink>
+          <NavLink exact to="/contact" activeClassName="activeLink">
+            CONTACT
+          </NavLink>
         </ul>
       </div>
 
@@ -44,14 +49,15 @@ const Main = () => {
   // );
   const { location } = useRouter();
   const transitions = useTransition(location, location => location.key, {
-    initial: {transform: "scale(1) " },
-    from: { transform: "scale(0.2) "  },
+    initial: { transform: "scale(1) " },
+    from: { transform: "scale(0.2) " },
     enter: { transform: "scale(1) " },
-    leave: { transform: "scale(4) ", zIndex: -100  }
+    leave: { transform: "scale(4) ", zIndex: -100 }
   });
 
   return transitions.map(({ item, props: transition, key }) => (
     <animated.div className="main" key={key} style={transition}>
+      
       <Switch location={item}>
         <Route exact path="/" component={Home} />
         <Route exact path="/projects" component={Projects} />

@@ -43,19 +43,21 @@ const Home = () => {
 
   return (
     <div className="about-page">
+
       <div className="code-box">
         <TypedReact
           strings={[
-            "Hello!^500 <br> my name is Jenuel^500 <br> but most call me Jay",
-            `I'm a <span class="wd">Web Developer</span>`,
-            `I'm a <span class="m">Musician</span>`,
-            `I'm a <span class="c">Creator</span>`,
-            `I'm a <span class="ps">Problem Solver</span>`,
-            `I enjoy Creating Web Apps`,
+            // "Hello!^500 <br> my name is Jay^500",
+            // `I'm a <span class="wd">Web Developer</span>`,
+            // `I'm a <span class="m">Musician</span>`,
+            // `I'm a <span class="c">Creator</span>`,
+            // `I'm a <span class="ps">Problem Solver</span>`,
+            // `I enjoy Creating Web Apps`,
 
-            `<span class="about-fin">Hello! My name is Jenuel, but most call me Jay. I'm a Web Developer, Musician, Creator &amp; Problem Solver. I enjoy Creating Web Apps</span>`
+            `<span class="about-fin">Hello! My name is Jenuel. I'm a Web Developer based in NYC. I have always had a passion for creating things &amp; solving problems. Nowadays I use this creativity to design and develop cool stuff on the internet. </span>`
           ]}
         />
+        {/* <p className="about-fin">click here for the full introduction</p>  */}
       </div>
       <FloatingIcons />
     </div>

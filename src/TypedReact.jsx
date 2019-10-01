@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/Main.css";
-import useTypewriter from "react-typewriter-hook";
+
 import Typed from "typed.js";
 
 class TypedReact extends React.Component {

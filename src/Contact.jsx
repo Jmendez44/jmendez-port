@@ -25,6 +25,16 @@ const Contact = () => {
     e.preventDefault();
   };
 
+  const isMobile = e => {
+    if (window.innerWidth < 800) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
+  console.log(isMobile());
+
   const handleChange = e =>
     setValues({ ...form, [e.target.name]: e.target.value });
 
@@ -33,11 +43,18 @@ const Contact = () => {
   return (
     <>
       <div className="contact-container" id="contact">
+        <video
+          autoPlay={`${isMobile()}`}
+          muted
+          loop
+          playsInline="true"
+          id="myVideo"
+          src={require("./Assets/People.mp4")}
+        ></video>
         <div className="contact-wrapper">
           <span>
             <h1>CONTACT ME..</h1>
-            <h2 className="contact-me">Let's create something together! </h2>
-            <div className="social"></div>
+            {/* <h2 className="contact-me">Let's create something together! </h2> */}
           </span>
 
           <form
@@ -80,6 +97,22 @@ const Contact = () => {
               </button>
             </p>
           </form>
+          <span className="social-links">
+            <div className="social">
+              <a href="https://github.com/Jmendez44" target="_blank">
+                Github
+              </a>
+              <a href="https://www.linkedin.com/in/jenuel-mendez/" target="_blank">
+                LinkedIn
+              </a>
+              <a href={require("./Assets/CreddleResume.pdf")} target="_blank">
+                Resume
+              </a>
+              <a href="mailto:Jenuel.mendez@gmail.com" target="_blank">
+                Email
+              </a>
+            </div>
+          </span>
         </div>
       </div>
     </>

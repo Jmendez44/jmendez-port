@@ -24,6 +24,17 @@ const Contact = () => {
 
     e.preventDefault();
   };
+  
+
+  const isMobile = e => {
+    if (window.innerWidth < 800) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  console.log(isMobile())
 
   const handleChange = e =>
     setValues({ ...form, [e.target.name]: e.target.value });
@@ -34,17 +45,18 @@ const Contact = () => {
     <>
       <div className="contact-container" id="contact">
         <video
-          autoplay='true'
-          muted='true'
-          loop='true'
+          
+          autoPlay={`${isMobile()}`}
+          muted
+          loop
+          playsinline
           id="myVideo"
           src={require("./Assets/People.mp4")}
         ></video>
         <div className="contact-wrapper">
           <span>
             <h1>CONTACT ME..</h1>
-            <h2 className="contact-me">Let's create something together! </h2>
-            <div className="social"></div>
+            {/* <h2 className="contact-me">Let's create something together! </h2> */}
           </span>
 
           <form
@@ -87,6 +99,14 @@ const Contact = () => {
               </button>
             </p>
           </form>
+          <span className="social-links">
+            <div className="social">
+              <a href="">Github</a>
+              <a href="">LinkedIn</a>
+              <a href="">Resume</a>
+              <a href="">Email</a>
+            </div>
+          </span>
         </div>
       </div>
     </>

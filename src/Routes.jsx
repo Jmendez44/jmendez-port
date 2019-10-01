@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 import {
-  BrowserRouter as Router,
+  
   Switch,
   Route,
   NavLink,
-  Link,
   __RouterContext
 } from "react-router-dom";
 import { animated, useTransition } from "react-spring";

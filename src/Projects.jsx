@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
-
-import Routes from "./Routes";
 
 const Projects = () => {
   const [isToggled, setToggle] = useState(false);
@@ -45,6 +43,24 @@ const Projects = () => {
         src={require("./Assets/cloudy.mp4")}
       ></video> */}
       <div className="projects-wrapper">
+        <div className="title more-info">
+          <h2>This portfolio was made with:</h2>
+          <ul>
+            
+            <li>React</li>
+            <li>React Spring</li>
+            <li>SASS</li>
+            <li>Typed.js</li>
+          </ul>
+          <a
+            className="blk"
+            href="https://github.com/labs12-call-complain/labs-call-back-FE"
+            target="_blank"
+          >
+            Github
+          </a>
+        </div>
+
         <div className="title">
           <animated.button
             className="toggle"
@@ -57,7 +73,11 @@ const Projects = () => {
           </animated.button>
           <animated.div style={cardAni} className="ani">
             <div className="ani-btns">
-              <a className="blk" href="https://callcomplain.netlify.com" target="_blank">
+              <a
+                className="blk"
+                href="https://callcomplain.netlify.com"
+                target="_blank"
+              >
                 Website
               </a>
               <a
@@ -91,6 +111,7 @@ const Projects = () => {
                     <li>Node.js</li>
                     <li>Express</li>
                     <li>Firebase</li>
+                    <li>PostgresQL</li>
                   </ul>
                   <h3>API's:</h3>
                   <ul className="apis">
@@ -137,10 +158,7 @@ const Projects = () => {
                 <div className="ani-description">
                   Goal of this project:
                   <ul className="goal">
-                    <li>
-                      ...
-                    </li>
-
+                    <li>...</li>
                   </ul>
                 </div>
                 <div className="ani-skills">
@@ -162,7 +180,7 @@ const Projects = () => {
             </div>
           </animated.div>
           <div className="project-card griipe">
-            <img src={require("./Assets/cgol.gif")} />
+            <img src={require("./Assets/cgol1.gif")} />
           </div>
         </div>
 
@@ -178,7 +196,11 @@ const Projects = () => {
           </animated.button>
           <animated.div style={cardAni2} className="ani2">
             <div className="ani-btns">
-              <a className="blk" href="https://keen-mccarthy-75ca2a.netlify.com/" target="_blank">
+              <a
+                className="blk"
+                href="https://keen-mccarthy-75ca2a.netlify.com/"
+                target="_blank"
+              >
                 Website
               </a>
               <a
@@ -197,36 +219,32 @@ const Projects = () => {
                   Project Info:
                   <ul className="goal">
                     <li>
-                    The goal of this project is to Help third world countries get access to school supplies.
+                      The goal of this project is to Help third world countries
+                      get access to school supplies.
                     </li>
-                    <li>Fully responsive design.</li>
-                    <li>This was a team project with 4 other people. I was in charge of designing and coding the Landing page.</li>
-                    <li>This was a week long project.</li>
 
+                    <li>
+                      This was a team project with 4 other people. I was in
+                      charge of designing and coding the Landing page.
+                    </li>
+                    <li>This was a week long project.</li>
                   </ul>
                 </div>
                 <div className="ani-skills">
                   <h3>Technologies:</h3>
                   <ul className="languages">
-                    
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>Javascript</li>
                     <li>LESS</li>
                   </ul>
-                  
                 </div>
               </div>
             </div>
-            v
           </animated.div>
           <div className="project-card griipe">
             <img src={require("./Assets/Capture.PNG")} />
           </div>
-        </div>
-
-        <div className="title more-info">
-          <div className="project-card more"></div>
         </div>
       </div>
     </div>

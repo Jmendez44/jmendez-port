@@ -172,18 +172,30 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    overflow: visible;
+  }
 }
 
 body h1 {
-  font-size: 5rem;
+  font-size: 2vw;
+}
+
+@media screen and (max-width: 800px) {
+  body h1 {
+    font-size: 3vw;
+  }
 }
 
 body h2 {
-  font-size: 2rem;
+  font-size: 1.5vw;
 }
 
 body .App {
-  overflow: hidden;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -213,6 +225,12 @@ body .App .main {
   position: absolute;
 }
 
+@media screen and (max-width: 800px) {
+  body .App .main {
+    overflow: visible;
+  }
+}
+
 body .App .about-page {
   width: 80%;
   height: 100%;
@@ -227,6 +245,18 @@ body .App .about-page {
           align-items: center;
 }
 
+@media screen and (max-width: 800px) {
+  body .App .about-page {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 body .App .about-page .bottom {
   border: black solid;
   position: fixed;
@@ -238,6 +268,12 @@ body .App .about-page .bottom {
 body .App .about {
   width: 40%;
   height: 55%;
+}
+
+@media screen and (max-width: 800px) {
+  body .App .about {
+    display: none !important;
+  }
 }
 
 body .App .icons {
@@ -276,6 +312,14 @@ body .App .me .unity {
   height: auto;
 }
 
+@media screen and (max-width: 800px) {
+  body .App .me .unity {
+    margin: 0 5%;
+    -webkit-filter: contrast(100);
+            filter: contrast(100);
+  }
+}
+
 body .App .me .fab {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -283,19 +327,54 @@ body .App .me .fab {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 30%;
+  width: 10vw;
+}
+
+@media screen and (max-width: 800px) {
+  body .App .me .fab {
+    width: 30%;
+  }
 }
 
 body .App .code-box {
   font-weight: bold;
-  font-size: 4em;
+  font-size: 2.5vw;
   line-height: 1;
-  width: 50%;
+  width: 45%;
+}
+
+@media screen and (max-width: 800px) {
+  body .App .code-box {
+    word-break: break-all;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 75vw;
+    height: 100vh;
+    font-size: 35px;
+  }
 }
 
 body .App .code-box .about-fin {
-  line-height: 0;
-  font-size: 3rem;
+  line-height: 1;
+}
+
+@media screen and (max-width: 800px) {
+  body .App .code-box .about-fin {
+    word-break: break-all;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+  }
 }
 
 body .App .code-box .wd {
@@ -325,15 +404,25 @@ body .App .links {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 400px;
+  width: 20vw;
   position: fixed;
-  top: 92vh;
+  top: 91.75vh;
   right: 14vw;
   z-index: 100;
 }
 
+@media screen and (max-width: 800px) {
+  body .App .links {
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 10%;
+    background: white;
+  }
+}
+
 body .App .links ul {
-  width: 90%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,12 +434,28 @@ body .App .links ul {
           align-items: center;
 }
 
+@media screen and (max-width: 800px) {
+  body .App .links ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 75%;
+  }
+}
+
 body .App .links ul a {
-  padding: 1%;
+  padding: 2%;
+  margin: 0 .5vw;
   text-decoration: none;
   color: black;
-  font-size: 1.5em;
+  font-size: 1.25vw;
   font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  body .App .links ul a {
+    font-size: 4vw;
+  }
 }
 
 body .App .links ul a:hover {
@@ -363,6 +468,12 @@ body .App .lines {
   pointer-events: none;
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  body .App .lines {
+    display: none;
+  }
 }
 
 .nav-wrapper {
@@ -420,6 +531,12 @@ body .App .lines {
   height: 100vh;
 }
 
+@media screen and (max-width: 800px) {
+  .projects-container {
+    margin-top: 100%;
+  }
+}
+
 .projects-container:before {
   content: "";
   position: absolute;
@@ -452,6 +569,19 @@ body .App .lines {
       flex-wrap: wrap;
   width: 75%;
   height: 75%;
+}
+
+@media screen and (max-width: 800px) {
+  .projects-container .projects-wrapper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 90vw;
+    height: 1000px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .projects-container .projects-wrapper .proj-btns {
@@ -503,8 +633,16 @@ body .App .lines {
   overflow: hidden;
 }
 
+@media screen and (max-width: 800px) {
+  .projects-container .projects-wrapper .title {
+    margin-bottom: 5%;
+    width: 100%;
+    height: 25%;
+  }
+}
+
 .projects-container .projects-wrapper .title .toggle {
-  font-size: 1em;
+  font-size: .80vw;
   position: absolute;
   width: 15%;
   height: 10%;
@@ -518,7 +656,7 @@ body .App .lines {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: black;
+  background: white;
   z-index: 151;
   pointer-events: none;
   overflow: hidden;
@@ -534,7 +672,7 @@ body .App .lines {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: black;
+  background: white;
   z-index: 151;
   pointer-events: none;
   overflow: hidden;
@@ -550,7 +688,7 @@ body .App .lines {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: black;
+  background: white;
   z-index: 151;
   pointer-events: none;
   overflow: hidden;
@@ -596,6 +734,12 @@ body .App .lines {
   z-index: -2;
 }
 
+.projects-container .projects-wrapper .project-card video {
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
 .projects-container .projects-wrapper .project-card .description {
   font-size: 1.5em;
   width: 50%;
@@ -636,12 +780,32 @@ body .App .lines {
       -ms-flex-align: center;
           align-items: center;
   background: white;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 60%;
-  height: 60%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25%;
+  height: 50%;
   border: black solid;
   overflow: hidden;
+  padding: 1%;
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-container .contact-wrapper {
+    width: 75%;
+    font-size: 2vw;
+  }
+}
+
+.contact-container .contact-wrapper .social-links {
+  border-top: solid black;
+  margin-top: 5%;
+  height: 20%;
+  width: 110%;
+  background: #05a3c27c;
+  margin-bottom: 0%;
 }
 
 .contact-container .contact-wrapper span {
@@ -651,23 +815,55 @@ body .App .lines {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
-  width: 44%;
+  margin-bottom: 2%;
+  height: 10%;
+  width: 100%;
+}
+
+.contact-container .contact-wrapper span .contact-me {
+  margin-bottom: 9%;
+}
+
+.contact-container .contact-wrapper span a {
+  padding: 2%;
+  font-size: 1vw;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  width: 5vw;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-container .contact-wrapper span a {
+    width: 15vw;
+    font-size: 3vw;
+  }
+}
+
+.contact-container .contact-wrapper span a:hover {
+  background: #fa5b3d;
 }
 
 .contact-container .contact-wrapper span .social {
-  border: black solid;
-  margin-top: 25%;
-  padding-top: 10%;
-  height: 10%;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  height: 100%;
 }
 
 .contact-container form {
@@ -686,13 +882,23 @@ body .App .lines {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 35%;
+  width: 100%;
   height: 100%;
 }
 
 .contact-container form .btn-stuff {
   width: 100%;
-  height: 8%;
+  height: 15%;
+}
+
+.contact-container form .btn-stuff .submit {
+  font-size: 1.25vw;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-container form .btn-stuff .submit {
+    font-size: 3vw;
+  }
 }
 
 .contact-container form .btn-stuff button {
@@ -704,6 +910,12 @@ body .App .lines {
   margin-top: 1%;
   font-size: 1.5rem;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-container form .btn-stuff button:active {
+  color: #fa5b3d;
+  background: black;
 }
 
 .contact-container form .form-stuff {
@@ -715,25 +927,37 @@ body .App .lines {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  height: 8%;
+  height: 17%;
 }
 
 .contact-container form .form-stuff input {
   border: 4px solid black;
   height: 90%;
-  font-size: 1.5em;
+  font-size: 1vw;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-container form .form-stuff input {
+    font-size: 3vw;
+  }
 }
 
 .contact-container form .form-stuff textarea {
   border: 4px solid black;
   height: 100%;
-  font-size: 1.5em;
+  font-size: 1vw;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
 
+@media screen and (max-width: 800px) {
+  .contact-container form .form-stuff textarea {
+    font-size: 3vw;
+  }
+}
+
 .msg {
-  height: 30% !important;
+  height: 50% !important;
 }
 
 .activeLink {
@@ -756,19 +980,19 @@ body .App .lines {
           flex-direction: column;
   width: 100%;
   height: 100%;
-  color: white;
+  color: black;
 }
 
 .ani-wrapper li {
-  margin: 5% 0 0 0;
+  margin: 1vw 0 0 0;
 }
 
 .ani-wrapper h1 {
   text-align: center;
-  width: 50%;
+  width: 75%;
   color: #fa5b3d;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.5vw;
 }
 
 .ani-wrapper .ani-content {
@@ -781,7 +1005,7 @@ body .App .lines {
       flex-wrap: wrap;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: white;
   padding: 1%;
 }
 
@@ -789,17 +1013,18 @@ body .App .lines {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-right: black solid 1px;
   width: 45%;
   height: 80%;
 }
 
 .ani-wrapper .ani-content .goal {
-  border-top: white solid;
+  font-size: 1vw;
+  border-top: black solid;
 }
 
 .ani-wrapper .ani-content .ani-skills {
@@ -821,20 +1046,26 @@ body .App .lines {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-top: white solid;
+  border-top: black solid;
   height: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
+.ani-wrapper .ani-content .ani-skills .languages li {
+  font-size: .80vw;
+  margin-right: 1vw;
+}
+
 .ani-wrapper .ani-content .ani-skills .apis {
+  font-size: .80vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-top: white solid;
+  border-top: black solid;
   height: 100%;
 }
 
@@ -872,20 +1103,22 @@ body .App .lines {
   cursor: pointer;
   width: 25%;
   height: 100%;
-  border: #fa5b3d solid;
+  border: black solid;
   background: #fa5b3d;
+  font-size: 1vw !important;
   font-size: 1rem;
   font-weight: bold;
 }
 
 .ani-btns a:hover {
-  background-color: black;
-  color: #fa5b3d;
+  background-color: white;
+  color: black;
 }
 
 .ani-btns .blk {
-  background-color: black;
-  color: #fa5b3d;
+  font-size: 1vw;
+  background-color: white;
+  color: black;
 }
 
 .ani-btns .blk:hover {

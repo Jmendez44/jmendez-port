@@ -728,7 +728,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  
   width: 100vw;
   height: 100vh;
 
@@ -753,6 +753,7 @@ body {
     overflow: hidden;
     padding: 1%;
     padding-bottom: 0;
+    
     @media screen and (max-width: 800px) {
       
       width: 75%;
@@ -1045,10 +1046,11 @@ body {
 }
 
 
-// #myVideo {
-//   @media screen and (max-width: 800px) {
-//     display: none !important;
-//     visibility : hidden !important;
-//   }
-// }
+#myVideo {
+  @media screen and (max-width: 800px) {
+    display: none !important;
+    visibility : hidden !important;
+    
+  }
+}
 

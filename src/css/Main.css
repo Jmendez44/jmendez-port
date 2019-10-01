@@ -1272,4 +1272,11 @@ body .App .lines {
   background-color: #fa5b3d;
   color: black;
 }
+
+@media screen and (max-width: 800px) {
+  #myVideo {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
 /*# sourceMappingURL=Main.css.map */

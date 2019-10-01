@@ -44,10 +44,10 @@ const Contact = () => {
     <>
       <div className="contact-container" id="contact">
         <video
-          autoPlay={`${isMobile()}`}
+          autoPlay
           muted
           loop
-          playsInline="true"
+          playsInline
           id="myVideo"
           src={require("./Assets/People.mp4")}
         ></video>

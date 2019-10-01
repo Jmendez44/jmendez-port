@@ -140,12 +140,12 @@ const Projects = () => {
           </animated.button>
           <animated.div style={cardAni1} className="ani1">
             <div className="ani-btns">
-              <a className="blk" href="#" target="_blank">
+              <a className="blk" href="https://eloquent-blackwell-fc5fcc.netlify.com/" target="_blank">
                 Website
               </a>
               <a
                 className="blk"
-                href="https://callcomplain.netlify.com"
+                href="https://github.com/Jmendez44/Conways-Life"
                 target="_blank"
               >
                 Github

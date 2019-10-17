@@ -75,7 +75,7 @@ const Projects = () => {
             <div className="ani-btns">
               <a
                 className="blk"
-                href="https://callcomplain.netlify.com"
+                href="https://griipeio.netlify.com/"
                 target="_blank"
               >
                 Website
@@ -145,7 +145,7 @@ const Projects = () => {
               </a>
               <a
                 className="blk"
-                href="https://github.com/Jmendez44/Conways-Life"
+                href="https://github.com/Jmendez44/Conways-Life/tree/j-mendez"
                 target="_blank"
               >
                 Github

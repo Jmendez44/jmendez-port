@@ -150,8 +150,6 @@ html {
 #root {
   width: 100vw;
   height: 100vh;
-
-
 }
 
 body {
@@ -161,8 +159,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  
 }
 
 code {
@@ -178,15 +174,11 @@ body {
   overflow: hidden;
   @media screen and (max-width: $break-small) {
     overflow: visible;
-    
   }
   h1 {
     font-size: 2vw;
     @media screen and (max-width: 800px) {
-      
-          
       font-size: 3vw;
-      
     }
   }
 
@@ -195,13 +187,10 @@ body {
   }
 
   .App {
-    
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 
     .main {
       overflow: hidden;
@@ -216,7 +205,6 @@ body {
 
       @media screen and (max-width: $break-small) {
         overflow: visible;
-        
       }
     }
 
@@ -231,7 +219,6 @@ body {
         // margin-top: 15%;
         justify-content: center;
         flex-direction: column;
-        
       }
 
       .bottom {
@@ -279,7 +266,6 @@ body {
         @media screen and (max-width: $break-small) {
           margin: 0 5%;
           filter: contrast(100);
-          
         }
       }
       .fab {
@@ -288,7 +274,6 @@ body {
         width: 10vw;
         @media screen and (max-width: $break-small) {
           width: 30%;
-          
         }
         // background: red;
       }
@@ -298,12 +283,11 @@ body {
       font-weight: bold;
       font-size: 2.5vw;
       line-height: 1;
-      // text-align: justify;
+      text-align: justify;
       // border: black solid;
-      width: 45%;
+      width: 50%;
 
       @media screen and (max-width: $break-small) {
-        
         word-break: break-all;
         hyphens: auto;
         display: flex;
@@ -315,12 +299,31 @@ body {
       }
 
       .about-fin {
-        line-height: 1;
-        @media screen and (max-width: $break-small) {
-        
-          word-break: break-all;
-          hyphens: auto;
+        line-height: 1.1;
 
+        @media screen and (max-width: $break-small) {
+          word-break: break-all;
+          hyphens: manual;
+        }
+
+        .highlight-r{
+          text-decoration: underline $my-color1;
+          // background-color: $my-color1 ;
+          
+        }
+        
+        
+        .highlight-l{
+          text-decoration: underline #3dfab5;
+          // background-color: #3dfab5 ;
+          
+        }
+
+        
+        .highlight-y{
+          text-decoration: underline #fabb3d;
+          // background-color: #fabb3d ;
+          
         }
       }
 
@@ -362,10 +365,9 @@ body {
       right: 14vw;
       z-index: 100;
 
-      
       @media screen and (max-width: $break-small) {
         // display: none;
-        
+
         top: 0;
         right: 0;
         width: 100vw;
@@ -387,7 +389,7 @@ body {
 
         a {
           padding: 2%;
-          margin: 0 .5vw;
+          margin: 0 0.5vw;
           text-decoration: none;
           color: black;
           font-size: 1.25vw;
@@ -395,10 +397,10 @@ body {
 
           @media screen and (max-width: $break-small) {
             // display: none;
-  
+
             font-size: 4vw;
           }
-  
+
           &:hover {
             background-color: $my-color1;
             color: black;
@@ -464,10 +466,9 @@ body {
   height: 100vh;
 
   @media screen and (max-width: $break-small) {
-      
     margin-top: 100%;
   }
-  
+
   &:before {
     content: "";
     position: absolute;
@@ -486,7 +487,6 @@ body {
     min-width: 100%;
     min-height: 100%;
     // filter: brightness(125%) grayscale(100%);
-
   }
   .projects-wrapper {
     display: flex;
@@ -499,13 +499,11 @@ body {
     // background: white;
 
     @media screen and (max-width: $break-small) {
-      
       flex-wrap: nowrap;
       width: 90vw;
       height: 1000px;
       flex-direction: column;
     }
-
 
     .proj-btns {
       display: flex;
@@ -532,7 +530,7 @@ body {
       display: flex;
       width: 49.5%;
       height: 49%;
-      
+
       border: white solid 4px;
       justify-content: space-between;
       flex-direction: column;
@@ -548,13 +546,12 @@ body {
         font-weight: bold;
         @media screen and (max-width: $break-small) {
           font-size: 4vw;
-          
         }
       }
-      ul{
+      ul {
         display: flex;
         flex-direction: column;
-        
+
         align-items: center;
         width: 50%;
         flex-wrap: wrap;
@@ -568,7 +565,6 @@ body {
             font-size: 3.5vw;
             margin-top: 1vh;
           }
-      
         }
       }
       .blk {
@@ -587,9 +583,8 @@ body {
         font-weight: bold;
         z-index: 110;
         @media screen and (max-width: $break-small) {
-          font-size: 3vw!important;
+          font-size: 3vw !important;
           width: 15%;
-          
         }
         &:hover {
           background-color: $my-color1;
@@ -597,7 +592,6 @@ body {
         }
       }
     }
-
 
     .title {
       position: relative;
@@ -615,15 +609,11 @@ body {
         margin-bottom: 5%;
         width: 100%;
         height: 25%;
-        
-        
       }
-
-      
 
       // border: black solid 1px;
       .toggle {
-        font-size: .80vw;
+        font-size: 0.8vw;
         position: absolute;
         width: 15%;
         height: 10%;
@@ -632,9 +622,7 @@ body {
         z-index: 150;
         overflow: hidden;
         @media screen and (max-width: 800px) {
-
           font-size: 1.7vw;
-          
         }
       }
 
@@ -728,7 +716,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   width: 100vw;
   height: 100vh;
 
@@ -753,12 +741,10 @@ body {
     overflow: hidden;
     padding: 1%;
     padding-bottom: 0;
-    
+
     @media screen and (max-width: 800px) {
-      
       width: 75%;
       font-size: 2vw;
-      
     }
     .social-links {
       border-top: solid black;
@@ -791,13 +777,11 @@ body {
         text-align: center;
         color: black;
         font-weight: bold;
-        
+
         width: 5vw;
         @media screen and (max-width: 800px) {
-      
           width: 15vw;
           font-size: 3vw;
-          
         }
         &:hover {
           background: #fa5b3d;
@@ -809,8 +793,7 @@ body {
         justify-content: space-between;
         align-items: center;
         // border: black solid;
-        
-        
+
         width: 90%;
         height: 100%;
       }
@@ -831,10 +814,7 @@ body {
       .submit {
         font-size: 1.25vw;
         @media screen and (max-width: 800px) {
-      
-          
           font-size: 3vw;
-          
         }
       }
       button {
@@ -847,7 +827,7 @@ body {
         font-size: 1.5rem;
         font-weight: bold;
         cursor: pointer;
-        
+
         &:active {
           color: #fa5b3d;
           background: black;
@@ -868,10 +848,7 @@ body {
         font-size: 1vw;
         font-family: "Roboto", Helvetica, Arial, sans-serif;
         @media screen and (max-width: 800px) {
-      
-          
           font-size: 3vw;
-          
         }
       }
       textarea {
@@ -880,10 +857,7 @@ body {
         font-size: 1vw;
         font-family: "Roboto", Helvetica, Arial, sans-serif;
         @media screen and (max-width: 800px) {
-      
-          
           font-size: 3vw;
-          
         }
       }
     }
@@ -908,7 +882,6 @@ body {
   width: 100%;
   height: 100%;
   li {
-    
     margin: 1vw 0 0 0;
   }
 
@@ -920,9 +893,7 @@ body {
     font-weight: bold;
     font-size: 1.5vw;
     @media screen and (max-width: 800px) {
-
       font-size: 4vw;
-      
     }
   }
   .ani-content {
@@ -946,9 +917,7 @@ body {
       font-size: 1vw;
       border-top: black solid;
       @media screen and (max-width: 800px) {
-
         font-size: 2.5vw;
-        
       }
     }
     .ani-skills {
@@ -966,25 +935,21 @@ body {
 
         li {
           // width: 4vw;
-          font-size: .80vw;
-          margin-right: 1vw; 
+          font-size: 0.8vw;
+          margin-right: 1vw;
           @media screen and (max-width: 800px) {
-
             font-size: 2.5vw;
-            
           }
         }
       }
       .apis {
-        font-size: .80vw;
+        font-size: 0.8vw;
         display: flex;
         justify-content: space-between;
         border-top: black solid;
         height: 100%;
         @media screen and (max-width: 800px) {
-
           font-size: 2.5vw;
-          
         }
       }
     }
@@ -1016,13 +981,11 @@ body {
     height: 100%;
     border: black solid;
     background: $my-color1;
-    font-size: 1vw ;
-    
+    font-size: 1vw;
+
     font-weight: bold;
     @media screen and (max-width: 800px) {
-
       font-size: 2vw;
-      
     }
     &:hover {
       background-color: white;
@@ -1034,9 +997,7 @@ body {
     background-color: white;
     color: black;
     @media screen and (max-width: 800px) {
-
       font-size: 2vw;
-      
     }
     &:hover {
       background-color: $my-color1;
@@ -1045,12 +1006,9 @@ body {
   }
 }
 
-
 #myVideo {
   @media screen and (max-width: 800px) {
     display: none !important;
-    visibility : hidden !important;
-    
+    visibility: hidden !important;
   }
 }
-

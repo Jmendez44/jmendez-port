@@ -1,11 +1,5 @@
 import React, { useContext } from "react";
-import {
-  
-  Switch,
-  Route,
-  NavLink,
-  __RouterContext
-} from "react-router-dom";
+import { Switch, Route, NavLink, __RouterContext } from "react-router-dom";
 import { animated, useTransition } from "react-spring";
 import Projects from "./Projects";
 import Home from "./Home";
@@ -38,15 +32,6 @@ const Routes = () => {
 };
 
 const Main = () => {
-  // return (
-  //   <animated.div className="main">
-  //     <Switch>
-  //       <Route exact path="/" component={Home} />
-  //       <Route exact path="/projects" component={Projects} />
-  //       <Route exact path="/contact" component={Contact} />
-  //     </Switch>
-  //   </animated.div>
-  // );
   const { location } = useRouter();
   const transitions = useTransition(location, location => location.key, {
     initial: { transform: "scale(1) " },
@@ -57,7 +42,6 @@ const Main = () => {
 
   return transitions.map(({ item, props: transition, key }) => (
     <animated.div className="main" key={key} style={transition}>
-      
       <Switch location={item}>
         <Route exact path="/" component={Home} />
         <Route exact path="/projects" component={Projects} />
@@ -66,6 +50,18 @@ const Main = () => {
     </animated.div>
   ));
 };
+
+export default Routes;
+
+// return (
+//   <animated.div className="main">
+//     <Switch>
+//       <Route exact path="/" component={Home} />
+//       <Route exact path="/projects" component={Projects} />
+//       <Route exact path="/contact" component={Contact} />
+//     </Switch>
+//   </animated.div>
+// );
 
 // const NavLink = props => {
 //   return (
@@ -82,5 +78,3 @@ const Main = () => {
 //     </li>
 //   );
 // }
-
-export default Routes;

@@ -340,7 +340,8 @@ body .App .code-box {
   font-weight: bold;
   font-size: 2.5vw;
   line-height: 1;
-  width: 45%;
+  text-align: justify;
+  width: 50%;
 }
 
 @media screen and (max-width: 800px) {
@@ -365,16 +366,31 @@ body .App .code-box {
 }
 
 body .App .code-box .about-fin {
-  line-height: 1;
+  line-height: 1.1;
 }
 
 @media screen and (max-width: 800px) {
   body .App .code-box .about-fin {
     word-break: break-all;
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
+    -webkit-hyphens: manual;
+        -ms-hyphens: manual;
+            hyphens: manual;
   }
+}
+
+body .App .code-box .about-fin .highlight-r {
+  -webkit-text-decoration: underline #fa5b3d;
+          text-decoration: underline #fa5b3d;
+}
+
+body .App .code-box .about-fin .highlight-l {
+  -webkit-text-decoration: underline #3dfab5;
+          text-decoration: underline #3dfab5;
+}
+
+body .App .code-box .about-fin .highlight-y {
+  -webkit-text-decoration: underline #fabb3d;
+          text-decoration: underline #fabb3d;
 }
 
 body .App .code-box .wd {
@@ -445,7 +461,7 @@ body .App .links ul {
 
 body .App .links ul a {
   padding: 2%;
-  margin: 0 .5vw;
+  margin: 0 0.5vw;
   text-decoration: none;
   color: black;
   font-size: 1.25vw;
@@ -748,7 +764,7 @@ body .App .lines {
 }
 
 .projects-container .projects-wrapper .title .toggle {
-  font-size: .80vw;
+  font-size: 0.8vw;
   position: absolute;
   width: 15%;
   height: 10%;
@@ -1177,7 +1193,7 @@ body .App .lines {
 }
 
 .ani-wrapper .ani-content .ani-skills .languages li {
-  font-size: .80vw;
+  font-size: 0.8vw;
   margin-right: 1vw;
 }
 
@@ -1188,7 +1204,7 @@ body .App .lines {
 }
 
 .ani-wrapper .ani-content .ani-skills .apis {
-  font-size: .80vw;
+  font-size: 0.8vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

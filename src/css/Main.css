@@ -341,7 +341,7 @@ body .App .code-box {
   font-size: 2.5vw;
   line-height: 1;
   text-align: justify;
-  width: 50%;
+  width: 45%;
 }
 
 @media screen and (max-width: 800px) {
@@ -475,8 +475,10 @@ body .App .links ul a {
 }
 
 body .App .links ul a:hover {
-  background-color: #fa5b3d;
   color: black;
+  text-shadow: #fa5b3d 2px 2px;
+  -webkit-transition: text-shadow 0.5s ease-in-out;
+  transition: text-shadow 0.5s ease-in-out;
 }
 
 body .App .lines {
@@ -576,8 +578,11 @@ body .App .lines {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  overflow-y: hidden;
+  overflow-x: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -585,6 +590,7 @@ body .App .lines {
       flex-wrap: wrap;
   width: 75%;
   height: 75%;
+  z-index: 110;
 }
 
 @media screen and (max-width: 800px) {
@@ -635,6 +641,7 @@ body .App .lines {
   display: flex;
   width: 49.5%;
   height: 49%;
+  margin: 2px;
   border: white solid 4px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -749,6 +756,7 @@ body .App .lines {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 2px;
   width: 49.5%;
   height: 49%;
   border: black solid 4px;
@@ -1089,9 +1097,7 @@ body .App .lines {
 }
 
 .activeLink {
-  background-color: #fa5b3d;
-  border: black solid;
-  color: black !important;
+  text-decoration: underline !important;
 }
 
 .ani-wrapper {

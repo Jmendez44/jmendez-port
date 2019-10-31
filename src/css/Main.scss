@@ -285,7 +285,7 @@ body {
       line-height: 1;
       text-align: justify;
       // border: black solid;
-      width: 50%;
+      width: 45%;
 
       @media screen and (max-width: $break-small) {
         word-break: break-all;
@@ -402,8 +402,10 @@ body {
           }
 
           &:hover {
-            background-color: $my-color1;
+            // background-color: $my-color1;
             color: black;
+            text-shadow: $my-color1 2px 2px ;
+            transition: text-shadow 0.5s ease-in-out;
 
             // font-style: italic;
           }
@@ -465,6 +467,7 @@ body {
   width: 100vw;
   height: 100vh;
 
+
   @media screen and (max-width: $break-small) {
     margin-top: 100%;
   }
@@ -490,11 +493,14 @@ body {
   }
   .projects-wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
+    overflow-y: hidden;
+    overflow-x: hidden;
     align-items: center;
     flex-wrap: wrap;
     width: 75%;
     height: 75%;
+    z-index: 110;
     // border: black solid;
     // background: white;
 
@@ -530,7 +536,7 @@ body {
       display: flex;
       width: 49.5%;
       height: 49%;
-
+      margin: 2px;
       border: white solid 4px;
       justify-content: space-between;
       flex-direction: column;
@@ -599,6 +605,7 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin: 2px;
       width: 49.5%;
       height: 49%;
       border: black solid 4px;
@@ -869,9 +876,10 @@ body {
 }
 
 .activeLink {
-  background-color: $my-color1;
-  border: black solid;
-  color: black !important;
+  text-decoration: underline !important;
+  // background-color: $my-color1;
+  // border: black solid;
+  // color: black !important;
 }
 
 .ani-wrapper {

@@ -246,6 +246,71 @@ const Projects = () => {
             <img src={require("./Assets/Capture.PNG")} />
           </div>
         </div>
+      
+              {/* <div className="title">
+          <animated.button
+            className="toggle"
+            onMouseOver={() => setColor2(!colorOrange2)}
+            onMouseOut={() => setColor2(!colorOrange2)}
+            style={colorToOrange2}
+            onClick={() => setToggle2(!isToggled2)}
+          >
+            Project Info
+          </animated.button>
+          <animated.div style={cardAni2} className="ani2">
+            <div className="ani-btns">
+              <a
+                className="blk"
+                href="https://keen-mccarthy-75ca2a.netlify.com/"
+                target="_blank"
+              >
+                Website
+              </a>
+              <a
+                className="blk"
+                href="https://github.com/irsr2/Web-UI-Dev-2"
+                target="_blank"
+              >
+                Github
+              </a>
+              <a onClick={() => setToggle2(!isToggled2)}>Close</a>
+            </div>
+            <div className="ani-wrapper">
+              <h1>International Rural School Report</h1>
+              <div className="ani-content">
+                <div className="ani-description">
+                  Project Info:
+                  <ul className="goal">
+                    <li>
+                      The goal of this project is to Help third world countries
+                      get access to school supplies.
+                    </li>
+
+                    <li>
+                      This was a team project with 4 other people. I was in
+                      charge of designing and coding the Landing page.
+                    </li>
+                    <li>This was a week long project.</li>
+                  </ul>
+                </div>
+                <div className="ani-skills">
+                  <h3>Technologies:</h3>
+                  <ul className="languages">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>LESS</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </animated.div>
+          <div className="project-card griipe">
+            <img src={require("./Assets/Capture.PNG")} />
+          </div>
+        </div>
+      
+         */}
       </div>
     </div>
   );

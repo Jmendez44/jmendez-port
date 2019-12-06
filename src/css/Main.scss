@@ -403,9 +403,9 @@ body {
 
           &:hover {
             // background-color: $my-color1;
-            color: black;
-            text-shadow: $my-color1 2px 2px ;
-            transition: text-shadow 0.5s ease-in-out;
+            background-color: black;
+            color: white;
+
 
             // font-style: italic;
           }

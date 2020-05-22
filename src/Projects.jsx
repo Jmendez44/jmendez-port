@@ -140,12 +140,12 @@ const Projects = () => {
           </animated.button>
           <animated.div style={cardAni1} className="ani1">
             <div className="ani-btns">
-              <a className="blk" href="https://eloquent-blackwell-fc5fcc.netlify.com/" target="_blank">
-                Website
+              <a className="blk" href="https://whimsical.com/UEoFTHwxx796L8zu27x7S3" target="_blank">
+                Design
               </a>
               <a
                 className="blk"
-                href="https://github.com/Jmendez44/Conways-Life/tree/j-mendez"
+                href="https://github.com/topicksio"
                 target="_blank"
               >
                 Github
@@ -153,12 +153,12 @@ const Projects = () => {
               <a onClick={() => setToggle1(!isToggled1)}>Close</a>
             </div>
             <div className="ani-wrapper">
-              <h1>Conway's Game of Life</h1>
+              <h1>Topicks.io</h1>
               <div className="ani-content">
                 <div className="ani-description">
                   Goal of this project:
                   <ul className="goal">
-                    <li>...</li>
+                    <li>Provide tools for live Podcasters to engage with viewer via live topic suggestions and QA sessions</li>
                   </ul>
                 </div>
                 <div className="ani-skills">
@@ -180,7 +180,7 @@ const Projects = () => {
             </div>
           </animated.div>
           <div className="project-card griipe">
-            <img src={require("./Assets/cgol1.gif")} />
+            <img src={require("./Assets/topicks.png")} />
           </div>
         </div>
 

@@ -10,27 +10,27 @@ const Projects = () => {
   const [colorOrange2, setColor2] = useState(false);
   const cardAni = useSpring({
     pointerEvents: isToggled ? "all" : "none",
-    transform: isToggled ? "translate(0,0)" : "translate(0,-100%)"
+    transform: isToggled ? "translate(0,0)" : "translate(0,-100%)",
   });
   const cardAni1 = useSpring({
     pointerEvents: isToggled1 ? "all" : "none",
-    transform: isToggled1 ? "translate(0,0)" : "translate(0,-100%)"
+    transform: isToggled1 ? "translate(0,0)" : "translate(0,-100%)",
   });
   const cardAni2 = useSpring({
     pointerEvents: isToggled2 ? "all" : "none",
-    transform: isToggled2 ? "translate(0,0)" : "translate(0,-100%)"
+    transform: isToggled2 ? "translate(0,0)" : "translate(0,-100%)",
   });
   const colorToOrange = useSpring({
     backgroundColor: colorOrange ? "#fa5b3d" : "white",
-    transform: colorOrange ? "scale(1.2)" : "scale(1)"
+    transform: colorOrange ? "scale(1.2)" : "scale(1)",
   });
   const colorToOrange1 = useSpring({
     backgroundColor: colorOrange1 ? "#fa5b3d" : "white",
-    transform: colorOrange1 ? "scale(1.2)" : "scale(1)"
+    transform: colorOrange1 ? "scale(1.2)" : "scale(1)",
   });
   const colorToOrange2 = useSpring({
     backgroundColor: colorOrange2 ? "#fa5b3d" : "white",
-    transform: colorOrange2 ? "scale(1.2)" : "scale(1)"
+    transform: colorOrange2 ? "scale(1.2)" : "scale(1)",
   });
 
   return (
@@ -94,31 +94,29 @@ const Projects = () => {
               <h1>GRIIPE</h1>
               <div className="ani-content">
                 <div className="ani-description">
-                  <h3>Goal of this project:</h3>
+                  <h3 className="subsection">Goal of this project:</h3>
                   <ul className="goal">
                     <li>
                       Facilitate the ability for retail customers to send
                       complaints privately and/or publicly.
                     </li>
                     <li>This was a team project with 3 other people.</li>
-                    <li>Project was built in a months time.</li>
+                    <li>Project was built in 1 month.</li>
                   </ul>
                 </div>
                 <div className="ani-skills">
-                  <h3>Technologies:</h3>
+                  <h3 className="subsection">Technologies:</h3>
                   <ul className="languages">
                     <li>React</li>
                     <li>Node.js</li>
                     <li>Express</li>
                     <li>Firebase</li>
                     <li>PostgresQL</li>
+                    <li>Deepgram API</li>
+                    <li>Google Places API</li>
+                    <li>Twitter API</li>
                   </ul>
-                  <h3>API's:</h3>
-                  <ul className="apis">
-                    <li>Deepgram</li>
-                    <li>Google Places</li>
-                    <li>Twitter</li>
-                  </ul>
+
                 </div>
               </div>
             </div>
@@ -140,7 +138,11 @@ const Projects = () => {
           </animated.button>
           <animated.div style={cardAni1} className="ani1">
             <div className="ani-btns">
-              <a className="blk" href="https://whimsical.com/UEoFTHwxx796L8zu27x7S3" target="_blank">
+              <a
+                className="blk"
+                href="https://whimsical.com/UEoFTHwxx796L8zu27x7S3"
+                target="_blank"
+              >
                 Design
               </a>
               <a
@@ -156,24 +158,25 @@ const Projects = () => {
               <h1>Topicks.io</h1>
               <div className="ani-content">
                 <div className="ani-description">
-                  Goal of this project:
+                <h3 className="subsection">Goal of this project:</h3>
                   <ul className="goal">
-                    <li>Provide tools for live Podcasters to engage with viewer via live topic suggestions and QA sessions</li>
+                    <li>
+                      A topic suggestion web app for live podcasts. It lets
+                      podcasters gather topics directly from their community in
+                      real time.
+                    </li>
+                    <li>Currently a one man project.</li>
                   </ul>
                 </div>
                 <div className="ani-skills">
-                  <h3>Technologies:</h3>
+                  <h3 className="subsection">Technologies: </h3>
                   <ul className="languages">
-                    <li>...</li>
-                    <li>...</li>
-                    <li>...</li>
-                    <li>...</li>
-                  </ul>
-                  <h3>API's:</h3>
-                  <ul className="apis">
-                    <li>...</li>
-                    <li>...</li>
-                    <li>...</li>
+                    <li>React</li>
+                    <li>React Hooks</li>
+                    <li>Node</li>
+                    <li>Apollo</li>
+                    <li>GraphQL</li>
+                    <li>MongoDB</li>
                   </ul>
                 </div>
               </div>
@@ -216,7 +219,7 @@ const Projects = () => {
               <h1>International Rural School Report</h1>
               <div className="ani-content">
                 <div className="ani-description">
-                  Project Info:
+                <h3 className="subsection">Goal of this project:</h3>
                   <ul className="goal">
                     <li>
                       The goal of this project is to Help third world countries
@@ -231,7 +234,7 @@ const Projects = () => {
                   </ul>
                 </div>
                 <div className="ani-skills">
-                  <h3>Technologies:</h3>
+                  <h3 className="subsection">Technologies:</h3>
                   <ul className="languages">
                     <li>HTML</li>
                     <li>CSS</li>
@@ -246,8 +249,8 @@ const Projects = () => {
             <img src={require("./Assets/Capture.PNG")} />
           </div>
         </div>
-      
-              {/* <div className="title">
+
+        {/* <div className="title">
           <animated.button
             className="toggle"
             onMouseOver={() => setColor2(!colorOrange2)}

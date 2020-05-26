@@ -135,7 +135,6 @@ export default class FloatingIcons extends React.PureComponent {
     return (
       <div className="about icons">
         <Container
-        
           reset
           native
           keys={items}

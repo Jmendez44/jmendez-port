@@ -111,7 +111,6 @@ const Projects = () => {
                     <li>Node.js</li>
                     <li>Express</li>
                     <li>Firebase</li>
-                    <li>PostgresQL</li>
                     <li>Deepgram API</li>
                     <li>Google Places API</li>
                     <li>Twitter API</li>
@@ -176,7 +175,8 @@ const Projects = () => {
                     <li>Node</li>
                     <li>Apollo</li>
                     <li>GraphQL</li>
-                    <li>MongoDB</li>
+                    <li>Hasura</li>
+                    <li>PostgresQL</li>
                   </ul>
                 </div>
               </div>

@@ -105,7 +105,7 @@ const Contact = () => {
               <a href="https://www.linkedin.com/in/jenuel-mendez/" target="_blank">
                 LinkedIn
               </a>
-              <a href={require("./Assets/CreddleResume.pdf")} target="_blank">
+              <a href={require("./Assets/JenuelMendez2020.pdf")} target="_blank">
                 Resume
               </a>
               <a href="mailto:Jenuel.mendez@gmail.com" target="_blank">

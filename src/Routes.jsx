@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
-import { Switch, Route, NavLink, __RouterContext } from "react-router-dom";
+import { Switch, Route, NavLink } from "react-router-dom";
+import { __RouterContext } from "react-router";
 import { animated, useTransition } from "react-spring";
 import Projects from "./Projects";
 import Home from "./Home";
 import Contact from "./Contact";
+
 
 const useRouter = () => {
   return useContext(__RouterContext);

@@ -54,7 +54,7 @@ const Home = () => {
             // `I'm a <span class="ps">Problem Solver</span>`,
             // `I enjoy Creating Web Apps`,
 
-            `<span class="about-fin">Hello! My name is Jenuel. I'm a <span class="highlight-r">Web Developer</span> based in NYC. I have always had a passion for <span class="highlight-y">Solving</span> <span class="highlight-y">Problems</span>  &amp; <span class="highlight-l">Creating</span> <span class="highlight-l">Things</span>. Nowadays I use this creativity to design and develop cool stuff on the internet. </span>`
+            `<span class="about-fin">Hello! My name is Jenuel <span style="font-weight: 200">(most know me as Jay👍)</span>. I'm a <span class="highlight-r">Web Developer</span> based in NYC. I have always had a passion for <span class="highlight-y">Solving</span> <span class="highlight-y">Problems</span>  &amp; <span class="highlight-l">Creating</span> <span class="highlight-l">Things</span>. Nowadays I use this creativity to design and develop cool stuff on the internet.</span>`
           ]}
         />
         {/* <p className="about-fin">click here for the full introduction</p>  */}

@@ -596,7 +596,7 @@ body .App .lines {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     width: 90vw;
-    height: 1000px;
+    height: 1300px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

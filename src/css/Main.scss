@@ -288,8 +288,9 @@ body {
       width: 45%;
 
       @media screen and (max-width: $break-small) {
-        word-break: break-all;
-        hyphens: auto;
+        overflow: hidden;
+        // word-break: break-all;
+        // hyphens: auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -302,8 +303,9 @@ body {
         line-height: 1.1;
 
         @media screen and (max-width: $break-small) {
+          
           word-break: break-all;
-          hyphens: manual;
+          // hyphens: manual;
         }
 
         .highlight-r{
@@ -507,7 +509,7 @@ body {
     @media screen and (max-width: $break-small) {
       flex-wrap: nowrap;
       width: 90vw;
-      height: 1300px;
+      height: 125vh;
       flex-direction: column;
     }
 

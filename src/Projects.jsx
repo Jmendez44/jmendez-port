@@ -61,6 +61,69 @@ const Projects = () => {
           </a>
         </div>
 
+        
+        <div className="title">
+          <animated.button
+            className="toggle"
+            onMouseOver={() => setColor1(!colorOrange1)}
+            onMouseOut={() => setColor1(!colorOrange1)}
+            onClick={() => setToggle1(!isToggled1)}
+            style={colorToOrange1}
+          >
+            Project Info
+          </animated.button>
+          <animated.div style={cardAni1} className="ani1">
+            <div className="ani-btns">
+              <a
+                className="blk"
+                href="https://whimsical.com/UEoFTHwxx796L8zu27x7S3"
+                target="_blank"
+              >
+                Design
+              </a>
+              <a
+                className="blk"
+                href="https://github.com/topicksio"
+                target="_blank"
+              >
+                Github
+              </a>
+              <a onClick={() => setToggle1(!isToggled1)}>Close</a>
+            </div>
+            <div className="ani-wrapper">
+              <h1>Topicks.io</h1>
+              <div className="ani-content">
+                <div className="ani-description">
+                <h3 className="subsection">Goal of this project:</h3>
+                  <ul className="goal">
+                    <li>
+                      A topic suggestion web app for live podcasts. It lets
+                      podcasters gather topics directly from their community in
+                      real time.
+                    </li>
+                    <li>Currently a one man project.</li>
+                  </ul>
+                </div>
+                <div className="ani-skills">
+                  <h3 className="subsection">Technologies: </h3>
+                  <ul className="languages">
+                    <li>React</li>
+                    <li>React Hooks</li>
+                    <li>Node</li>
+                    <li>Apollo</li>
+                    <li>GraphQL</li>
+                    <li>Hasura</li>
+                    <li>PostgresQL</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </animated.div>
+          <div className="project-card griipe">
+            <img src={require("./Assets/topicks.png")} />
+          </div>
+        </div>
+
         <div className="title">
           <animated.button
             className="toggle"
@@ -125,67 +188,6 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="title">
-          <animated.button
-            className="toggle"
-            onMouseOver={() => setColor1(!colorOrange1)}
-            onMouseOut={() => setColor1(!colorOrange1)}
-            onClick={() => setToggle1(!isToggled1)}
-            style={colorToOrange1}
-          >
-            Project Info
-          </animated.button>
-          <animated.div style={cardAni1} className="ani1">
-            <div className="ani-btns">
-              <a
-                className="blk"
-                href="https://whimsical.com/UEoFTHwxx796L8zu27x7S3"
-                target="_blank"
-              >
-                Design
-              </a>
-              <a
-                className="blk"
-                href="https://github.com/topicksio"
-                target="_blank"
-              >
-                Github
-              </a>
-              <a onClick={() => setToggle1(!isToggled1)}>Close</a>
-            </div>
-            <div className="ani-wrapper">
-              <h1>Topicks.io</h1>
-              <div className="ani-content">
-                <div className="ani-description">
-                <h3 className="subsection">Goal of this project:</h3>
-                  <ul className="goal">
-                    <li>
-                      A topic suggestion web app for live podcasts. It lets
-                      podcasters gather topics directly from their community in
-                      real time.
-                    </li>
-                    <li>Currently a one man project.</li>
-                  </ul>
-                </div>
-                <div className="ani-skills">
-                  <h3 className="subsection">Technologies: </h3>
-                  <ul className="languages">
-                    <li>React</li>
-                    <li>React Hooks</li>
-                    <li>Node</li>
-                    <li>Apollo</li>
-                    <li>GraphQL</li>
-                    <li>Hasura</li>
-                    <li>PostgresQL</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </animated.div>
-          <div className="project-card griipe">
-            <img src={require("./Assets/topicks.png")} />
-          </div>
-        </div>
 
         <div className="title">
           <animated.button

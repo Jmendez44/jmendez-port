@@ -6,7 +6,7 @@ import Routes from "./Routes";
 const App = () => {
 
   const isMobile = window.innerWidth < 800;
-  const showItems = isMobile ? 1 : 3;
+  // const showItems = isMobile ? 1 : 3;
 
   return (
     <div className="App">

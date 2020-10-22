@@ -2,11 +2,11 @@ import React from "react";
 import { Keyframes, animated } from "react-spring/renderprops";
 //import { TimingAnimation, Easing } from '../../../src/addons'
 
-const Container = Keyframes.Spring(async next => {
+const Container = Keyframes.Spring(async (next) => {
   while (true) {
     await next({
       from: { radians: 0, color: "#247BA0" },
-      to: { radians: 2 * Math.PI }
+      to: { radians: 2 * Math.PI },
     });
   }
 });
@@ -23,10 +23,11 @@ export default class FloatingIcons extends React.PureComponent {
             style={{
               willChange: "transform",
               transform: radians.interpolate(
-                r =>
-                  `translate3d(0, ${20 *
-                    Math.sin(r + 1 + (i * 2 * Math.PI) / 5)}px, 0)`
-              )
+                (r) =>
+                  `translate3d(0, ${
+                    20 * Math.sin(r + 1 + (i * 2 * Math.PI) / 5)
+                  }px, 0)`
+              ),
             }}
             className="fab fa-html5 fa-5x"
           ></animated.i>
@@ -35,10 +36,11 @@ export default class FloatingIcons extends React.PureComponent {
             style={{
               willChange: "transform",
               transform: radians.interpolate(
-                r =>
-                  `translate3d(0, ${20 *
-                    Math.sin(r + 2 + (i * 2 * Math.PI) / 5)}px, 0)`
-              )
+                (r) =>
+                  `translate3d(0, ${
+                    20 * Math.sin(r + 2 + (i * 2 * Math.PI) / 5)
+                  }px, 0)`
+              ),
             }}
             className="fab fa-node fa-5x"
           ></animated.i>
@@ -47,10 +49,11 @@ export default class FloatingIcons extends React.PureComponent {
             style={{
               willChange: "transform",
               transform: radians.interpolate(
-                r =>
-                  `translate3d(0, ${20 *
-                    Math.sin(r + 3 + (i * 2 * Math.PI) / 5)}px, 0)`
-              )
+                (r) =>
+                  `translate3d(0, ${
+                    20 * Math.sin(r + 3 + (i * 2 * Math.PI) / 5)
+                  }px, 0)`
+              ),
             }}
             className="fab fa-react fa-5x"
           ></animated.i>
@@ -59,10 +62,11 @@ export default class FloatingIcons extends React.PureComponent {
             style={{
               willChange: "transform",
               transform: radians.interpolate(
-                r =>
-                  `translate3d(0, ${20 *
-                    Math.sin(r + 1 + (i * 2 * Math.PI) / 5)}px, 0)`
-              )
+                (r) =>
+                  `translate3d(0, ${
+                    20 * Math.sin(r + 1 + (i * 2 * Math.PI) / 5)
+                  }px, 0)`
+              ),
             }}
             className="fab fa-css3-alt fa-5x"
           ></animated.i>
@@ -71,10 +75,11 @@ export default class FloatingIcons extends React.PureComponent {
             style={{
               willChange: "transform",
               transform: radians.interpolate(
-                r =>
-                  `translate3d(0, ${20 *
-                    Math.sin(r + 2 + (i * 2 * Math.PI) / 5)}px, 0)`
-              )
+                (r) =>
+                  `translate3d(0, ${
+                    20 * Math.sin(r + 2 + (i * 2 * Math.PI) / 5)
+                  }px, 0)`
+              ),
             }}
             className="fab fa-python fa-5x"
           ></animated.i>
@@ -83,22 +88,24 @@ export default class FloatingIcons extends React.PureComponent {
             style={{
               willChange: "transform",
               transform: radians.interpolate(
-                r =>
-                  `translate3d(0, ${20 *
-                    Math.sin(r + 3 + (i * 2 * Math.PI) / 5)}px, 0)`
-              )
+                (r) =>
+                  `translate3d(0, ${
+                    20 * Math.sin(r + 3 + (i * 2 * Math.PI) / 5)
+                  }px, 0)`
+              ),
             }}
-            className="fab fa-adobe fa-5x"
+            className="fab fa-linux fa-5x"
           ></animated.i>
           <animated.i
             key={7}
             style={{
               willChange: "transform",
               transform: radians.interpolate(
-                r =>
-                  `translate3d(0, ${20 *
-                    Math.sin(r + 1 + (i * 2 * Math.PI) / 5)}px, 0)`
-              )
+                (r) =>
+                  `translate3d(0, ${
+                    20 * Math.sin(r + 1 + (i * 2 * Math.PI) / 5)
+                  }px, 0)`
+              ),
             }}
             className="fab fa-js fa-5x"
           ></animated.i>
@@ -107,25 +114,26 @@ export default class FloatingIcons extends React.PureComponent {
             style={{
               willChange: "transform",
               transform: radians.interpolate(
-                r =>
-                  `translate3d(0, ${20 *
-                    Math.sin(r + 2 + (i * 2 * Math.PI) / 5)}px, 0)`
-              )
+                (r) =>
+                  `translate3d(0, ${
+                    20 * Math.sin(r + 2 + (i * 2 * Math.PI) / 5)
+                  }px, 0)`
+              ),
             }}
             className="fab fa-github fa-5x"
           ></animated.i>
-          <animated.img
+          <animated.i
             key={9}
             style={{
               willChange: "transform",
               transform: radians.interpolate(
-                r =>
-                  `translate3d(0, ${20 *
-                    Math.sin(r + 3 + (i * 2 * Math.PI) / 5)}px, 0)`
-              )
+                (r) =>
+                  `translate3d(0, ${
+                    20 * Math.sin(r + 3 + (i * 2 * Math.PI) / 5)
+                  }px, 0)`
+              ),
             }}
-            src={require("./Assets/unity2.png")}
-            className="unity"
+            className="fab fas fa-database fa-5x"
           />
         </div>
       ));

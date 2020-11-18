@@ -102,7 +102,7 @@ const Contact = () => {
               <a href="https://github.com/Jmendez44" target="_blank">
                 Github
               </a>
-              <a href="https://www.linkedin.com/in/jenuel-mendez/" target="_blank">
+              <a href="https://www.linkedin.com/in/jmendez44/" target="_blank">
                 LinkedIn
               </a>
               <a href={require("./Assets/JenuelMendezResumeD.pdf")} target="_blank">

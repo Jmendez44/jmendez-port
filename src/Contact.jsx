@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-const encode = data => {
+const encode = (data) => {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
 };
 
@@ -10,22 +10,22 @@ const Contact = () => {
   const [form, setValues] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...form })
+      body: encode({ "form-name": "contact", ...form }),
     })
       .then(() => alert("Success!"))
-      .catch(error => alert(error));
+      .catch((error) => alert(error));
 
     e.preventDefault();
   };
 
-  const isMobile = e => {
+  const isMobile = (e) => {
     if (window.innerWidth < 800) {
       return false;
     } else {
@@ -35,7 +35,7 @@ const Contact = () => {
 
   console.log(isMobile());
 
-  const handleChange = e =>
+  const handleChange = (e) =>
     setValues({ ...form, [e.target.name]: e.target.value });
 
   const { name, email, message } = form;
@@ -105,7 +105,7 @@ const Contact = () => {
               <a href="https://www.linkedin.com/in/jmendez44/" target="_blank">
                 LinkedIn
               </a>
-              <a href={require("./Assets/JMendezResumeFull.pdf")} target="_blank">
+              <a href={require("./Assets/JMendeResume__.pdf")} target="_blank">
                 Resume
               </a>
               <a href="mailto:Jenuel.mendez@gmail.com" target="_blank">

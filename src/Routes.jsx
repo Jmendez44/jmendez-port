@@ -6,7 +6,6 @@ import Projects from "./Projects";
 import Home from "./Home";
 import Contact from "./Contact";
 
-
 const useRouter = () => {
   return useContext(__RouterContext);
 };
@@ -35,11 +34,11 @@ const Routes = () => {
 
 const Main = () => {
   const { location } = useRouter();
-  const transitions = useTransition(location, location => location.key, {
+  const transitions = useTransition(location, (location) => location.key, {
     initial: { transform: "scale(1) " },
     from: { transform: "scale(0.2) " },
     enter: { transform: "scale(1) " },
-    leave: { transform: "scale(4) ", zIndex: -100 }
+    leave: { transform: "scale(4) ", zIndex: -100 },
   });
 
   return transitions.map(({ item, props: transition, key }) => (
@@ -54,29 +53,3 @@ const Main = () => {
 };
 
 export default Routes;
-
-// return (
-//   <animated.div className="main">
-//     <Switch>
-//       <Route exact path="/" component={Home} />
-//       <Route exact path="/projects" component={Projects} />
-//       <Route exact path="/contact" component={Contact} />
-//     </Switch>
-//   </animated.div>
-// );
-
-// const NavLink = props => {
-//   return (
-//     <li>
-//       <Link {...props} />
-//     </li>
-//   );
-// };
-
-// const NavLink = (props) => {
-//   return (
-//     <li>
-//       <Link {...props} />
-//     </li>
-//   );
-// }
